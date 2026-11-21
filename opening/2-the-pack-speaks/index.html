@@ -7,101 +7,101 @@
 <title>Atulyash · The Pack Speaks</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#FFFFFF;--mist:#F3F1EA;--ink:#17231B;--soft:#47524A;--green:#2F5D3A;--green-dk:#22462B;--gold:#C9963B;--gold-lt:#E9C77F;--brick:#B5462E;--line:#E2DED3}
+:root{--teal:#2E7A66;--teal-dk:#235F4F;--panel:#2F7060;--mint:#EAF4F0;--mint-2:#D9EBE4;--orange:#D9502C;--ink:#22302C;--soft:#52605B;--line:#E2ECE8}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{overflow-x:clip}
-body{background:var(--paper);color:var(--ink);font-family:"Source Serif 4",Georgia,serif;font-size:20px;line-height:1.6}
+body{background:#fff;color:var(--ink);font-family:"DM Sans",system-ui,sans-serif;font-size:19px;line-height:1.6}
 img{display:block;max-width:100%}
 a{color:inherit}
-.wrap{width:min(1200px,100% - 32px);margin-inline:auto;position:relative}
-.sans{font-family:"Archivo",sans-serif}
-h1,h2,h3{font-family:"Archivo",sans-serif;font-stretch:112%;line-height:1.02;letter-spacing:-.015em}
-.label{position:absolute;z-index:5;font:600 14px/1 "Archivo",sans-serif;font-stretch:100%;background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:4px;padding:6px 9px}
-.kicker{font:700 16px/1 "Archivo",sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--green)}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto;position:relative}
+h1,h2,h3{font-family:"Fredoka",system-ui,sans-serif;font-weight:600;line-height:1.1;color:var(--teal)}
+.kick{font-size:16px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--teal-dk)}
+.label{position:absolute;z-index:6;font:500 13px/1 "DM Sans",sans-serif;background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:6px 9px}
+.btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 28px;border-radius:10px;font-weight:700;font-size:19px;text-decoration:none}
+.btn.or{background:var(--orange);color:#fff;box-shadow:0 14px 26px -14px rgba(217,80,44,.8)}
+.btn.tl{border:1.5px solid var(--teal);color:var(--teal-dk)}
 
-header .bar{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
-header img{height:38px;width:auto}
-.call{display:inline-flex;align-items:center;min-height:48px;padding:0 20px;border-radius:6px;background:var(--mist);text-decoration:none;font:700 18px "Archivo",sans-serif;color:var(--green-dk)}
+.bar{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.bar img{height:34px;width:auto}
+.call{display:inline-flex;align-items:center;min-height:46px;padding:0 18px;border-radius:10px;background:var(--mint);color:var(--teal-dk);font-weight:700;font-size:17px;text-decoration:none}
 
 /* hero */
-.hero{position:relative}
-.hero .copy{padding:18px 0 8px}
-.hero h1{font-size:clamp(44px,11.4vw,84px);font-weight:900;color:var(--green-dk)}
-.lede{font-size:22px;color:var(--soft);margin-top:18px;max-width:28ch}
-.ctas{display:grid;gap:12px;margin-top:28px}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:58px;padding:0 28px;border-radius:8px;font:700 20px "Archivo",sans-serif;text-decoration:none}
-.btn.brick{background:var(--brick);color:#fff;box-shadow:0 12px 24px -12px rgba(181,70,46,.7)}
-.btn.line{border:2px solid var(--green-dk);color:var(--green-dk)}
-.stage{position:relative;height:500px;margin-top:20px}
-.stage .pack{position:absolute;left:50%;bottom:58px;height:430px;width:auto;transform:translateX(-50%) rotate(-3deg);filter:drop-shadow(0 30px 30px rgba(20,30,20,.28));z-index:2}
-.stage .grain{position:absolute;left:50%;bottom:0;width:min(520px,118%);transform:translateX(-50%);mix-blend-mode:multiply;z-index:3}
-.stage .label{right:0;bottom:6px}
-.panel{background:var(--green);color:#fff;border-radius:28px 28px 0 0;padding:34px 22px 40px;position:relative;z-index:4;margin-inline:-16px}
-.panel .kicker{color:var(--gold-lt)}
-.facts{list-style:none;margin-top:18px}
-.facts li{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.18)}
-.facts li:last-child{border:0}
-.facts b{display:block;font:800 22px/1.2 "Archivo",sans-serif;font-stretch:105%}
-.facts span{display:block;font-size:19px;color:#E4EDE5;margin-top:4px}
-.panel .note{font-style:italic;font-size:19px;color:var(--gold-lt);margin-top:14px}
+.hero{padding:14px 0 0}
+.hero h1{font-size:clamp(40px,10.6vw,62px);margin-top:12px}
+.lede{font-size:19px;color:var(--soft);margin-top:12px;max-width:30ch}
+.ctas{display:grid;gap:12px;margin-top:22px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:26px}
+.stats b{display:block;font-family:"Fredoka";font-weight:600;font-size:28px;color:var(--ink);line-height:1.1}
+.stats span{font-size:16px;color:var(--soft);line-height:1.3;display:block}
+.product{position:relative;margin-top:150px}
+.panel{background:var(--panel);color:#fff;border-radius:28px 28px 0 0;padding:230px 20px 34px;position:relative;margin-inline:-16px}
+.packwrap{position:absolute;left:50%;top:-140px;transform:translateX(-50%);width:250px;z-index:3}
+.packwrap .pk{width:100%;filter:drop-shadow(0 26px 26px rgba(10,40,30,.35));transform:rotate(-2deg)}
+.packwrap .greens{position:absolute;width:230px;left:-90px;bottom:-14px;z-index:-1;transform:rotate(-8deg)}
+.packwrap .grain{position:absolute;width:220px;right:-80px;bottom:-26px;z-index:2}
+.packwrap .label{right:-60px;bottom:-40px}
+.badge{position:absolute;left:-46px;top:4px;width:92px;height:92px;border-radius:50%;background:#fff;color:var(--teal-dk);display:grid;place-items:center;text-align:center;font:600 16px/1.1 "Fredoka";padding:10px;box-shadow:0 8px 20px -8px rgba(0,0,0,.35);border:3px solid var(--mint-2);z-index:4;transform:rotate(-12deg)}
+.facts{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:4px 18px}
+.facts li{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.22)}
+.facts small{display:block;font-size:16px;color:#D7EAE3}
+.facts b{display:block;font-family:"Fredoka";font-weight:500;font-size:22px;line-height:1.15}
+.panel .note{font-size:17px;color:#E7F3EE;margin-top:16px;font-style:italic}
 
 /* manifesto */
-.manifesto{background:var(--mist);padding:76px 0 0;position:relative}
-.manifesto h2{font-size:clamp(38px,9vw,72px);font-weight:900;color:var(--green-dk);margin-top:14px;max-width:14ch}
-.manifesto .body{font-size:21px;margin-top:22px;max-width:36ch}
-.shelf{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:36px}
-.tile{background:#fff;border-radius:16px;padding:20px 18px;border:1px solid var(--line)}
-.tile .ic{width:44px;height:44px;fill:none;stroke:var(--green);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.tile b{display:block;font:800 21px/1.2 "Archivo",sans-serif;margin-top:10px}
-.tile small{display:flex;gap:6px;align-items:center;font:600 16px "Archivo",sans-serif;color:var(--green);margin-top:6px}
-.tile.atta{background:var(--green);color:#fff;border:0;position:relative}
-.tile.atta .ic{stroke:var(--gold-lt)}
-.tile.atta small{color:var(--gold-lt)}
-.veerbox{display:grid;grid-template-columns:1fr auto;align-items:end;gap:0;margin-top:30px}
-.say{background:var(--brick);color:#fff;font:800 clamp(26px,6.6vw,40px)/1.15 "Archivo",sans-serif;font-stretch:108%;padding:22px 24px;border-radius:18px 18px 4px 18px;margin-bottom:120px;position:relative}
-.veerbox figure{position:relative;width:140px}
-.veerbox figure .label{left:0;top:0}
+.about{background:var(--mint);padding:64px 0}
+.about h2{font-size:clamp(34px,9vw,54px);margin-top:12px}
+.about .body{font-size:19px;color:var(--soft);margin-top:16px;max-width:40ch}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+.tile{background:#fff;border-radius:14px;padding:22px 16px 18px;position:relative;box-shadow:0 10px 24px -20px rgba(20,60,50,.5)}
+.tile .lf{position:absolute;left:10px;top:-12px;width:24px;height:24px}
+.tile b{display:block;font-family:"Fredoka";font-weight:600;font-size:21px;color:var(--ink)}
+.tile span{display:block;font-size:16px;color:var(--teal-dk);font-weight:700;margin-top:4px}
+.tile.atta{background:var(--teal-dk);color:#fff}
+.tile.atta b{color:#fff}.tile.atta span{color:#E1F1EB}
+.veerbox{display:grid;grid-template-columns:1fr 130px;align-items:end;gap:6px;margin-top:26px}
+.say{background:var(--orange);color:#fff;border-radius:18px 18px 4px 18px;padding:18px 20px;font:600 clamp(26px,7vw,34px)/1.15 "Fredoka";margin-bottom:110px}
+.veerbox figure{position:relative}
+.veerbox .label{left:0;top:0}
 
 /* way */
-.way{padding:90px 0 100px}
-.way h2{font-size:clamp(40px,9.6vw,80px);font-weight:900;color:var(--green-dk);margin-top:12px}
-.way .cols{display:grid;gap:30px;margin-top:36px}
-.pin{display:none}
-.rows{list-style:none;border-top:3px solid var(--green-dk)}
-.row{display:grid;grid-template-columns:64px 1fr 96px;gap:16px;align-items:center;padding:22px 0;border-bottom:1px solid var(--line);position:relative}
-.row .no{font:900 34px/1 "Archivo",sans-serif;font-stretch:70%;color:#9A6E1F}
-.row h3{font-size:24px;font-weight:800;font-stretch:105%}
-.row p{font-size:19px;color:var(--soft);margin-top:4px;line-height:1.5}
-.row .th{width:96px;height:96px;background:var(--mist);border-radius:14px;display:grid;place-items:center;position:relative}
-.row .th img{width:90%;height:90%;object-fit:contain}
-.row .th svg{width:52%;fill:none;stroke:var(--green);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.row .th .label{font-size:12px;padding:4px 6px;bottom:-8px;left:50%;transform:translateX(-50%)}
+.way{padding:64px 0 0}
+.feat{display:grid;gap:22px;margin-top:22px}
+.feat .pk2{width:100%;border-radius:18px}
+.checks{list-style:none;display:grid;gap:10px}
+.checks li{display:flex;gap:12px;align-items:flex-start;font-size:19px}
+.checks li::before{content:"";flex:none;width:26px;height:26px;border-radius:50%;background:var(--mint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12l4 4 8-8' fill='none' stroke='%23235F4F' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat;margin-top:2px}
+.band{background:var(--panel);margin-top:50px;padding:46px 0 56px;color:#fff}
+.band h2{color:#fff;font-size:clamp(32px,8.6vw,50px)}
+.band .kick{color:#E1F1EB}
+.cards{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.card{background:var(--mint);border-radius:16px;overflow:hidden;color:var(--ink);position:relative}
+.card .pic{background:#fff;aspect-ratio:4/3;display:grid;place-items:center;margin:8px;border-radius:10px}
+.card .pic img{width:86%;height:86%;object-fit:contain}
+.card .pic svg{width:44%;fill:none;stroke:var(--teal-dk);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.card .t{padding:4px 12px 16px}
+.card h3{font-size:19px;color:var(--ink)}
+.card p{font-size:16px;color:var(--soft);line-height:1.45;margin-top:4px}
+.card .label{left:12px;top:12px;font-size:11px;padding:4px 7px}
 
 @media (min-width:960px){
-  header .bar{padding:24px 0}
-  .hero .grid{display:grid;grid-template-columns:1.25fr 1fr 380px;align-items:stretch;min-height:640px}
-  .hero h1{font-size:70px}
-  .hero .copy{padding:60px 0;align-self:center}
-  .ctas{grid-auto-flow:row;justify-items:start}
-  .stage{height:auto;margin:0}
-  .stage .pack{height:520px;bottom:90px}
-  .stage .grain{width:620px}
-  .panel{border-radius:0;margin:0 calc((100vw - min(1200px,100vw - 32px))/-2) 0 0;padding:56px 44px;display:flex;flex-direction:column;justify-content:center}
-  .manifesto{padding:120px 0 0}
-  .manifesto .grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}
-  .shelf{margin-top:0}
-  .veerbox figure{width:230px}
-  .way{padding:130px 0}
-  .way .cols{grid-template-columns:420px 1fr;gap:70px;align-items:start}
-  .pin{display:block;position:sticky;top:40px;background:var(--mist);border-radius:28px;padding:40px;height:560px}
-  .pin img{height:100%;margin-inline:auto;filter:drop-shadow(0 24px 24px rgba(0,0,0,.2))}
-  .row{grid-template-columns:90px 1fr 140px;padding:30px 0}
-  .row .no{font-size:52px}
-  .row h3{font-size:30px}
-  .row p{font-size:20px}
-  .row .th{width:140px;height:140px}
+  body{font-size:20px}
+  .bar{padding:24px 0}
+  .bar img{height:42px}
+  .hero .grid{display:grid;grid-template-columns:1fr 1.15fr;gap:30px;align-items:center}
+  .ctas{grid-auto-flow:column;justify-content:start}
+  .product{margin:0}
+  .panel{margin:0 calc((100vw - min(1180px,100vw - 32px))/-2) 0 220px;border-radius:0;min-height:600px;padding:50px 40px 40px 230px}
+  .packwrap{left:-170px;top:50%;transform:translateY(-50%);width:330px}
+  .facts{grid-template-columns:1fr;max-width:280px}
+  .about{padding:100px 0}
+  .about .grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .tiles{margin-top:0}
+  .way{padding:100px 0 0}
+  .feat{grid-template-columns:1fr 1.2fr;align-items:center}
+  .checks{grid-template-columns:1fr 1fr;gap:16px 26px}
+  .cards{grid-template-columns:repeat(6,1fr);gap:16px}
 }
 </style>
 </head>
@@ -111,46 +111,56 @@ header img{height:38px;width:auto}
 <main>
 <section class="hero" aria-labelledby="h1">
   <div class="wrap grid">
-    <div class="copy">
-      <p class="kicker">Freshly milled. Delivered weekly.</p>
-      <h1 id="h1" style="margin-top:14px">Atta in its purest form</h1>
+    <div>
+      <p class="kick">Intro</p>
+      <h1 id="h1">Atta in its purest form</h1>
       <p class="lede">Ours is milled slowly on natural stone. Fresh, every week.</p>
       <div class="ctas">
-        <a class="btn brick" href="#packs">See packs and prices</a>
-        <a class="btn line" href="#area">Check delivery to my area</a>
+        <a class="btn or" href="#packs">See packs and prices</a>
+        <a class="btn tl" href="#area">Check delivery to my area</a>
+      </div>
+      <div class="stats">
+        <div><b>₹120</b><span>a kilo</span></div>
+        <div><b>2 kg</b><span>packs to start</span></div>
+        <div><b>Weekly</b><span>or just once</span></div>
       </div>
     </div>
-    <div class="stage">
-      <img class="pack" src="../shared/pack.webp" alt="The Atulyash 2 kg atta pack">
-      <img class="grain" src="img/grain-spill.webp" alt="">
-      <span class="label">Grain: concept image</span>
+    <div class="product">
+      <div class="panel">
+        <div class="packwrap">
+          <img class="greens" src="img/greens.webp" alt="">
+          <img class="pk" src="../shared/pack.webp" alt="The Atulyash 2 kg atta pack">
+          <img class="grain" src="img/grain-cut.webp" alt="">
+          <span class="badge">Slow stone milled</span>
+          <span class="label">Wheat and grain: concept image</span>
+        </div>
+        <ul class="facts" aria-label="What is in the pack">
+          <li><small>Wheat</small><b>MP Sharbati</b></li>
+          <li><small>Origin</small><b>Single</b></li>
+          <li><small>Mill</small><b>Natural stone</b></li>
+          <li><small>Speed</small><b>Low</b></li>
+          <li><small>Chokar</small><b>Kept in</b></li>
+          <li><small>Milled</small><b>Day before</b></li>
+        </ul>
+        <p class="note">No exaggerated health claims. Just atta in its purest form.</p>
+      </div>
     </div>
-    <aside class="panel" aria-label="What the pack says">
-      <p class="kicker">What the pack says</p>
-      <ul class="facts">
-        <li><b>Made from 100% MP Sharbati Wheat</b><span>Never Mixed. Never Blended.</span></li>
-        <li><b>Slow Natural Stone Milled</b><span>No Industrial Steel Rollers. No Artificial Emery Stones. Ground at Controlled, Low Speed.</span></li>
-        <li><b>Full Fibre, The Soul of Atta</b><span>Bran Intact. Nothing Removed.</span></li>
-        <li><b>Freshly Milled in Small Batches</b><span>Delivered Soon After Grinding. Not Produced for Long-Term Storage.</span></li>
-      </ul>
-      <p class="note">No exaggerated health claims. Just atta in its purest form.</p>
-    </aside>
   </div>
 </section>
 
-<section class="manifesto" aria-labelledby="h2m">
+<section class="about" aria-labelledby="h2m">
   <div class="wrap grid">
     <div>
-      <p class="kicker">A second look</p>
+      <p class="kick">About us</p>
       <h2 id="h2m">We question everything. Why not atta?</h2>
       <p class="body">We keep changing everything around us. Our skincare, our cooking oil, even our utensils, because we research what is best for our family. So why don't we stop and think about our atta? Its quality, where it comes from, how it is made. We just take their word for it.</p>
     </div>
     <div>
-      <div class="shelf">
-        <div class="tile"><svg class="ic" viewBox="0 0 48 48"><rect x="16" y="14" width="16" height="28" rx="4"/><path d="M20 14V8h8v6"/></svg><b>Skincare</b><small>✓ Researched</small></div>
-        <div class="tile"><svg class="ic" viewBox="0 0 48 48"><path d="M20 6h8v6l4 6v22a2 2 0 0 1-2 2H18a2 2 0 0 1-2-2V18l4-6z"/></svg><b>Cooking oil</b><small>✓ Researched</small></div>
-        <div class="tile"><svg class="ic" viewBox="0 0 48 48"><path d="M8 22h32l-3 14a4 4 0 0 1-4 3H15a4 4 0 0 1-4-3z"/></svg><b>Utensils</b><small>✓ Researched</small></div>
-        <div class="tile atta"><svg class="ic" viewBox="0 0 48 48"><path d="M14 10h20l2 6v24a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V16z"/><path d="M12 18h24"/></svg><b>Atta</b><small>? Not asked yet</small></div>
+      <div class="tiles">
+        <div class="tile"><svg class="lf" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 22C3 10 12 2 22 2c0 11-9 19-20 20z" fill="#5FAF4E"/></svg><b>Skincare</b><span>✓ We research it</span></div>
+        <div class="tile"><svg class="lf" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 22C3 10 12 2 22 2c0 11-9 19-20 20z" fill="#5FAF4E"/></svg><b>Cooking oil</b><span>✓ We research it</span></div>
+        <div class="tile"><svg class="lf" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 22C3 10 12 2 22 2c0 11-9 19-20 20z" fill="#5FAF4E"/></svg><b>Utensils</b><span>✓ We research it</span></div>
+        <div class="tile atta"><svg class="lf" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 22C3 10 12 2 22 2c0 11-9 19-20 20z" fill="#F2C14E"/></svg><b>Atta</b><span>? Not asked yet</span></div>
       </div>
       <div class="veerbox">
         <p class="say" lang="hi-Latn">Isse kisi ne poocha?</p>
@@ -162,17 +172,31 @@ header img{height:38px;width:auto}
 
 <section class="way" aria-labelledby="h2w">
   <div class="wrap">
-    <p class="kicker">Six choices, shown openly</p>
-    <h2 id="h2w">The Atulyash way</h2>
-    <div class="cols">
-      <div class="pin" aria-hidden="true"><img src="../shared/pack.webp" alt=""></div>
-      <ol class="rows">
-        <li class="row"><span class="no">01</span><div><h3>The wheat</h3><p>Single-origin MP Sharbati. Never blended with other varieties.</p></div><div class="th"><img src="../shared/sharbati-wheat-sack.webp" alt=""><span class="label">Illustration</span></div></li>
-        <li class="row"><span class="no">02</span><div><h3>The cleaning</h3><p>In several stages.</p></div><div class="th"><svg viewBox="0 0 48 48"><ellipse cx="24" cy="18" rx="18" ry="6"/><path d="M6 18l4 16c2 6 26 6 28 0l4-16M14 26h20M16 32h16"/></svg></div></li>
-        <li class="row"><span class="no">03</span><div><h3>The stone</h3><p>Natural stone chakkis. No emery stone, no steel rollers.</p></div><div class="th"><img src="../shared/natural-millstone-and-rock.webp" alt=""><span class="label">Illustration</span></div></li>
-        <li class="row"><span class="no">04</span><div><h3>The chokar</h3><p>Chokar kept in. Nothing removed, nothing added.</p></div><div class="th"><img src="../shared/stone-chakki-chokar-retained.webp" alt=""><span class="label">Illustration</span></div></li>
-        <li class="row"><span class="no">05</span><div><h3>The milling day</h3><p>Milled in small batches the day before, delivered the next morning. Packed with minimal handling.</p></div><div class="th"><img src="../shared/pack-2kg-day1-milled-day2-delivered.webp" alt=""><span class="label">Illustration</span></div></li>
-        <li class="row"><span class="no">06</span><div><h3>The delivery</h3><p>We deliver with our own riders.</p></div><div class="th"><svg viewBox="0 0 48 48"><circle cx="12" cy="34" r="6"/><circle cx="38" cy="34" r="6"/><path d="M12 34h10l6-12h6l4 12M28 22l-4-8h-6M34 22h6"/></svg></div></li>
+    <p class="kick">Features</p>
+    <h2 id="h2w" style="font-size:clamp(36px,9.4vw,56px);margin-top:12px">The Atulyash way</h2>
+    <div class="feat">
+      <img class="pk2" src="img/grains-real.webp" alt="Wheat grains in a wooden spoon with wheat ears">
+      <ul class="checks">
+        <li>Single-origin MP Sharbati</li>
+        <li>Cleaned in several stages</li>
+        <li>Natural stone chakkis</li>
+        <li>Chokar kept in</li>
+        <li>Milled the day before</li>
+        <li>Our own riders</li>
+      </ul>
+    </div>
+  </div>
+  <div class="band">
+    <div class="wrap">
+      <p class="kick">Six choices</p>
+      <h2>What goes into every pack</h2>
+      <ol class="cards">
+        <li class="card"><div class="pic"><img src="../shared/sharbati-wheat-sack.webp" alt=""></div><span class="label">Illustration</span><div class="t"><h3>The wheat</h3><p>Single-origin MP Sharbati. Never blended with other varieties.</p></div></li>
+        <li class="card"><div class="pic"><svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="18" rx="18" ry="6"/><path d="M6 18l4 16c2 6 26 6 28 0l4-16M14 26h20M16 32h16"/></svg></div><div class="t"><h3>The cleaning</h3><p>In several stages.</p></div></li>
+        <li class="card"><div class="pic"><img src="../shared/natural-millstone-and-rock.webp" alt=""></div><span class="label">Illustration</span><div class="t"><h3>The stone</h3><p>Natural stone chakkis. No emery stone, no steel rollers.</p></div></li>
+        <li class="card"><div class="pic"><img src="../shared/stone-chakki-chokar-retained.webp" alt=""></div><span class="label">Illustration</span><div class="t"><h3>The chokar</h3><p>Chokar kept in. Nothing removed, nothing added.</p></div></li>
+        <li class="card"><div class="pic"><img src="../shared/pack-2kg-day1-milled-day2-delivered.webp" alt=""></div><span class="label">Illustration</span><div class="t"><h3>The milling day</h3><p>Milled in small batches the day before, delivered the next morning.</p></div></li>
+        <li class="card"><div class="pic"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="12" cy="34" r="6"/><circle cx="38" cy="34" r="6"/><path d="M12 34h10l6-12h6l4 12M28 22l-4-8h-6M34 22h6"/></svg></div><div class="t"><h3>The delivery</h3><p>We deliver with our own riders. Packed with minimal handling.</p></div></li>
       </ol>
     </div>
   </div>

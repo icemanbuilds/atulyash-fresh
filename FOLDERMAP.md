@@ -18,5 +18,7 @@ A clean starting kit for redesigning the Atulyash homepage with no old design in
   - `_gen/`: the raw Codex-generated concept images (full size) and the Veer reference copies used to make them.
   - `screenshots/`: phone (390 px) and desktop (1280 px) screenshots of each direction.
 - `index.html`: the root page (GitHub Pages home) showing a desktop and phone preview of each direction with a link to open it.
+- `opening/CREDITS.md`: credits and licences for the real stock photos used (Pexels, Unsplash). Everything else is AI-made and labelled on the page.
+- `opening/_stock/`: full-size stock photos Codex downloaded, with `TASK.md` (its brief) and `CREDITS.md` for all 16. Not pushed; pages use resized copies in each `img/`.
 - `.claude/launch.json`: serves `opening/` locally on port 8765.
-- Git: pushed to GitHub as `icemanbuilds/atulyash-fresh` (public, GitHub Pages from `main`). `opening/_gen/` and `.claude/` are left out by `.gitignore`.
+- Git: pushed to GitHub as `icemanbuilds/atulyash-fresh` (public, GitHub Pages from `main`). `opening/_gen/`, `opening/_stock/` and `.claude/` are left out by `.gitignore`.
