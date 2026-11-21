@@ -20,14 +20,14 @@ You are designing the homepage of Atulyash from a blank page. Atulyash makes fre
 - colour palette,
 - composition and layout idea (not the same skeleton reskinned),
 - way of using imagery,
-- Veer, restyled to belong in that direction (AI regeneration from the supplied drawings is allowed; he must stay recognisably the same boy, labelled "Concept art").
+- Veer, restyled to belong in that direction (AI regeneration from the supplied drawings is allowed; he must stay recognisably the same boy).
 
 They must also differ clearly from one another. It's for older Delhi families, so text must be large and easy to read, and every page must work beautifully on a phone first (390 px wide) and then on desktop (1280 px).
 
 **How to work:**
 1. Before building anything, show me one direction per inspiration style (six) in short: which style it comes from, a name, the mood in one line, the fonts, the palette, the big layout idea and how Veer will look. Wait for me to pick five.
 2. Then build each as a static HTML page in `opening/1-…` to `opening/5-…`, plus `opening/index.html` linking them.
-3. Check each page at 390 px and 1280 px: no sideways scrolling, no console errors, text contrast at least WCAG AA, tap targets at least 44 px, and every AI image or art labelled. Send me screenshots of all five.
+3. Check each page at 390 px and 1280 px: no sideways scrolling, no console errors, text contrast at least WCAG AA, tap targets at least 44 px. Never add "Concept image", "Concept art" or similar labels. Send me screenshots of all five.
 4. Ask me before publishing anything anywhere.
 
-**Always:** plain words, no em dashes, no footer text, no health or taste claims, no comparisons with other brands, never "the only" or "our farm", and no filming or video shoots in any idea.
+**Always:** phone first (design the 390 px version first, give it the desktop feel with its own touch), plain words, no em dashes, no footer text, no health or taste claims, no comparisons with other brands, never "the only" or "our farm", and no filming or video shoots in any idea.

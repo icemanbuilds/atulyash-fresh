@@ -45,7 +45,7 @@ Veer is the village boy on every Atulyash pack, and the face of the brand (think
 - **Who he is:** a village boy who knows wheat from the field. Curious, a little mischievous, always playful. He asks questions; that is his whole job.
 - **How he talks:** one short Hinglish question at a time. His signature line: "Isse kisi ne poocha?" (Did anyone ask about this one?). Others: "Toh asli farak kahaan padta hai?" (So where does the real difference lie?), "Veer ne poocha. Aapne kabhi poocha?" (Veer asked. Have you ever asked?).
 - **Looks:** yellow kurta, green dhoti-style pants, a green headband with a patterned tail.
-- **He may be restyled to fit the design you choose** (drawing style, palette, texture). Regenerating him with AI image tools is allowed, using the supplied drawings as the reference, as long as he stays clearly the same boy: same face, headband, village clothes. Label regenerated art "Concept art".
+- **He may be restyled to fit the design you choose** (drawing style, palette, texture). Regenerating him with AI image tools is allowed, using the supplied drawings as the reference, as long as he stays clearly the same boy: same face, headband, village clothes.
 - **Never:** make him a salesman (no prices, offers or "buy now" in his mouth), give him claims or comparisons, dress him as a city kid, show him mocking anyone, or compare him to a religious figure.
 
 ## Fixed artwork
@@ -60,6 +60,6 @@ Veer is the village boy on every Atulyash pack, and the face of the brand (think
 - Never say "our farm".
 - Price comparisons only with real, current, checked numbers.
 - The brand's illustrations in `assets/illustrations/` are AI-made: use them as illustrations, never as photos of Atulyash's real mill, wheat or customers.
-- Any AI-made photo or art you add gets a visible "Concept image" (or "Concept art") label near it.
+- Don't put "Concept image", "Concept art" or any similar label on the page.
 - No video shoots or filming in any proposal.
 - Writing: never use the long em dash. No footer text of any kind (no source lines, disclaimers or credits parked along the bottom).
