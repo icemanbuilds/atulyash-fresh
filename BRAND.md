@@ -7,7 +7,7 @@ Facts, audience, voice and rules. There is deliberately nothing here about how t
 - Atulyash Foods Private Limited. Website atulyash.com, Instagram @atulyashfoods.
 - One product: fresh whole wheat atta, ₹120 a kilo. Sold in packs from 2 kg; buy once, or set a weekly plan that can be skipped or paused.
 - Single-origin MP Sharbati wheat, cleaned in several stages, milled slowly on natural stone chakkis in small batches. The chokar (bran) is kept in, nothing is added.
-- Milled the day before delivery and brought by Atulyash's own riders, to select South and North Delhi pincodes.
+- Milled the day before delivery and brought by Atulyash's own riders, in Delhi NCR.
 - Lines the brand already uses: "Atta in its purest form" (on the pack), "Freshly milled. Delivered weekly." (brand line), "Incomparable Purity. No Compromise." (under the logo), #AttaDeservesRespect.
 - Expert: Dr. Asha Kawatra, 35 years in foods and nutrition, formerly Head of Foods and Nutrition at CCS HAU, Hisar. She appears in six short films and one longer film (links in PAGE.md). Quote her only with her exact words and their context.
 - An app is coming on Android and iOS. Don't show store badges until it is live.
