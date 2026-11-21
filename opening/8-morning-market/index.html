@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Atulyash fresh: Morning market</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+/* Morning market: a bright fresh-produce shop front. Warm cream, leaf green, butter yellow, DM Serif Display headlines, Manrope text, floating fact cards over a product spread */
+:root{
+  --cream:#FBF5EB;--paper:#FFFDF8;--green:#2B7A1C;--green-d:#1C5A10;--leaf:#E6F1DA;--butter:#F7C64A;
+  --ink:#1E2A17;--soft:#4E5A47;--line:rgba(30,42,23,.1);--shadow:0 14px 34px rgba(60,50,20,.12)
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font:500 18px/1.6 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--green);outline-offset:3px;border-radius:10px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.tag{position:absolute;font-size:12px;line-height:1;padding:5px 8px;border-radius:99px;background:rgba(255,253,248,.85);color:var(--soft)}
+h1,h2{font-family:'DM Serif Display',Georgia,serif;font-weight:400;letter-spacing:-.005em}
+
+/* header */
+.top{background:var(--paper);box-shadow:0 1px 0 var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;min-height:48px}
+.logo img{width:30px}
+.logo b{font:400 25px/1 'DM Serif Display',serif;color:var(--green)}
+.logo b span{color:var(--ink)}
+nav{display:none}
+nav a{display:inline-flex;align-items:center;min-height:48px;padding:0 4px;text-decoration:none;font-weight:600;color:var(--soft);font-size:16px}
+nav a[aria-current]{color:var(--green);box-shadow:inset 0 -2px 0 var(--green)}
+.top .order{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 18px;border-radius:99px;background:var(--leaf);color:var(--green-d);font-weight:700;text-decoration:none;font-size:16px}
+.top .order svg{width:20px;height:20px}
+
+/* hero */
+.hero{position:relative;padding:30px 0 0;overflow:hidden}
+.leafy{position:absolute;width:44px;height:22px;background:radial-gradient(ellipse at 30% 50%,#7FC24A,#3E8E22);border-radius:0 100% 0 100%;opacity:.9;pointer-events:none}
+.pill{display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:0 16px;border-radius:99px;background:var(--leaf);color:var(--green-d);font-weight:700;font-size:15px}
+.pill i{width:8px;height:8px;border-radius:50%;background:var(--green)}
+.hero h1{margin:16px 0 0;font-size:clamp(46px,12.6vw,84px);line-height:1.02}
+.hero h1 em{font-style:normal;color:var(--green)}
+.lede{margin:16px 0 0;color:var(--soft);font-size:19px;max-width:30ch}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;gap:12px;min-height:56px;padding:0 10px 0 24px;border-radius:99px;font-weight:700;font-size:18px;text-decoration:none}
+.btn span{display:grid;place-items:center;width:38px;height:38px;border-radius:50%}
+.btn svg{width:18px;height:18px}
+.btn-g{background:var(--green);color:#fff}
+.btn-g span{background:rgba(255,255,255,.18)}
+.btn-y{background:var(--butter);color:var(--ink)}
+.btn-y span{background:rgba(30,42,23,.08)}
+.visual{position:relative;margin:58px -20px 0}
+.visual .spread{width:100%}
+.visual .tag{right:24px;bottom:12px}
+.fact{position:absolute;display:flex;align-items:center;gap:12px;padding:12px 16px 12px 12px;border-radius:18px;background:var(--paper);box-shadow:var(--shadow);max-width:250px}
+.fact .ic{flex:none;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--leaf);color:var(--green)}
+.fact .ic.y{background:#FCEDC2;color:#7A5300}
+.fact svg{width:24px;height:24px}
+.fact b{display:block;font-size:16px;line-height:1.25;font-weight:800}
+.fact small{display:block;font-size:14px;line-height:1.35;color:var(--soft)}
+.f1{right:10px;top:-46px}
+.f2{left:10px;bottom:12%}
+@media (max-width:759px){.fact{max-width:215px;padding:10px 14px 10px 10px}.fact .ic{width:40px;height:40px}.fact b{font-size:15px}.fact small{font-size:13px}}
+
+/* strip */
+.strip{position:relative;z-index:2;background:var(--paper);border-radius:22px;box-shadow:var(--shadow);margin:-8px 0 0;display:grid}
+.strip>div{display:flex;align-items:center;gap:14px;padding:18px 20px;border-top:1px solid var(--line)}
+.strip>div:first-child{border-top:0}
+.strip .ic{flex:none;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--leaf);color:var(--green)}
+.strip svg{width:24px;height:24px}
+.strip b{display:block;font-weight:800;font-size:17px;line-height:1.25}
+.strip small{display:block;color:var(--soft);font-size:15px;line-height:1.35}
+
+/* manifesto */
+.mani{padding:70px 0 20px}
+.mani .box{position:relative;border-radius:30px;background:var(--leaf);padding:34px 24px 0;overflow:hidden}
+.mani h2{margin:0;font-size:clamp(40px,11vw,68px);line-height:1.04}
+.mani h2 em{font-style:normal;color:var(--green)}
+.mani p{margin:18px 0 0;color:var(--soft);max-width:40ch}
+.mani .veer{position:relative;display:flex;align-items:flex-end;justify-content:center;gap:10px;margin-top:26px}
+.mani .veer img{width:min(190px,48%)}
+.mani .bubble{flex:1;align-self:center;margin-bottom:60px;padding:14px 18px;border-radius:20px 20px 20px 4px;background:var(--paper);box-shadow:var(--shadow);font:400 25px/1.15 'DM Serif Display',serif;color:var(--green-d);max-width:210px}
+
+/* the way */
+.way{padding:60px 0 90px}
+.way .hd{display:flex;flex-direction:column;gap:6px;margin-bottom:24px}
+.way h2{margin:0;font-size:clamp(38px,10vw,60px);line-height:1.05}
+.way .hd p{margin:0;color:var(--soft)}
+.cards{display:grid;gap:16px}
+.card{position:relative;background:var(--paper);border-radius:24px;box-shadow:var(--shadow);overflow:hidden;display:grid;grid-template-columns:120px 1fr;align-items:center}
+.card .im{position:relative;align-self:stretch;background:var(--leaf);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.card .im img{width:100%;height:100%;object-fit:cover}
+.card .im.fit img{object-fit:contain;padding:8px}
+.card .im .tag{left:6px;bottom:6px;font-size:11px}
+.card .tx{padding:20px 18px}
+.card b{display:block;font:400 25px/1.1 'DM Serif Display',serif;margin-bottom:6px}
+.card span{display:block;color:var(--soft);font-size:16px;line-height:1.45}
+.card .day{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-align:center;color:var(--green-d)}
+.card .day small{font-weight:800;font-size:12px;letter-spacing:.08em}
+.card .day strong{font:400 22px/1 'DM Serif Display',serif;margin-bottom:6px}
+
+@media (min-width:760px){
+  .strip{grid-template-columns:1fr 1fr}
+  .strip>div:nth-child(2){border-top:0}
+  .strip>div:nth-child(even){border-left:1px solid var(--line)}
+  .cards{grid-template-columns:1fr 1fr}
+}
+@media (min-width:1040px){
+  nav{display:flex;gap:30px}
+  .hero{padding:40px 0 0}
+  .hero .hw{display:grid;grid-template-columns:.92fr 1.08fr;align-items:center;gap:10px}
+  .hero h1{font-size:76px}
+  .visual{margin:0 -60px 0 0}
+  .visual .spread{-webkit-mask-image:linear-gradient(90deg,transparent,#000 14%);mask-image:linear-gradient(90deg,transparent,#000 14%)}
+  .f1{right:8%;left:auto;top:-2%}
+  .f2{left:-6%;bottom:16%}
+  .strip{grid-template-columns:repeat(4,1fr);margin-top:0}
+  .strip>div{border-top:0;border-left:1px solid var(--line);padding:24px 20px}
+  .strip>div:first-child{border-left:0}
+  .mani .box{display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:end;padding:60px 60px 0}
+  .mani .box>div:first-child{padding-bottom:60px}
+  .mani .veer{margin:0}
+  .mani .veer img{width:230px}
+  .way .hd{flex-direction:row;align-items:flex-end;justify-content:space-between}
+  .cards{grid-template-columns:repeat(4,1fr);gap:20px}
+  .card{grid-template-columns:1fr;align-items:stretch}
+  .card .im{aspect-ratio:4/3}
+  .card .tx{padding:22px 22px 26px}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#"><img src="img/mark.png" alt="" width="240" height="210"><b>Atulyash</b></a>
+    <nav aria-label="Main"><a href="#" aria-current="page">Home</a><a href="#way">How we mill</a><a href="#packs">Packs and prices</a><a href="#plan">Weekly plan</a><a href="#contact">Contact</a></nav>
+    <a class="order" href="#order"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l-1.5 10.5a2 2 0 0 1-2 1.5h-7a2 2 0 0 1-2-1.5z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>Order</a>
+  </div>
+</header>
+
+<section class="hero">
+  <span class="leafy" style="left:46%;top:60px;transform:rotate(-30deg)" aria-hidden="true"></span>
+  <span class="leafy" style="right:4%;top:24px;transform:rotate(40deg) scale(.8)" aria-hidden="true"></span>
+  <div class="wrap hw">
+    <div>
+      <span class="pill"><i></i>Milled yesterday. At your door today.</span>
+      <h1>Fresh from the <em>chakki,</em> delivered to you</h1>
+      <p class="lede">Atta in its purest form. Ours is milled slowly on natural stone. Fresh, every week.</p>
+      <div class="ctas">
+        <a class="btn btn-g" href="#order">Order fresh atta<span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a class="btn btn-y" href="#packs">See packs and prices<span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      </div>
+    </div>
+    <div class="visual">
+      <img class="spread" src="img/cluster.webp" alt="The Atulyash 2 kg pack with a bowl of fresh atta, golden wheat ears and a stack of rotis" width="1536" height="1024">
+      <div class="fact f1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4M9 15l2 2 4-4"/></svg></span><div><b>Milled the day before</b><small>In small batches, on natural stone</small></div></div>
+      <div class="fact f2"><span class="ic y"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="17" r="2.5"/><circle cx="18" cy="17" r="2.5"/><path d="M8.5 17h7M3.5 17V9h9v8M12.5 11h4l3 3v3"/></svg></span><div><b>Next-morning delivery</b><small>By our own riders</small></div></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="strip">
+      <div><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 22V9"/><path d="M12 10c-2-1.4-2.6-4-2-6 2 .6 2.8 3.4 2 6zM12 10c2-1.4 2.6-4 2-6-2 .6-2.8 3.4-2 6zM12 16c-2.6-1.3-3.4-4-2.6-6 2.6.7 3.4 3.6 2.6 6zM12 16c2.6-1.3 3.4-4 2.6-6-2.6.7-3.4 3.6-2.6 6z"/></svg></span><div><b>MP Sharbati wheat</b><small>Single-origin, never blended</small></div></div>
+      <div><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><ellipse cx="12" cy="15" rx="9" ry="3"/><path d="M3 15v2c0 1.7 4 3 9 3s9-1.3 9-3v-2"/><ellipse cx="12" cy="11" rx="9" ry="3"/></svg></span><div><b>Natural stone chakkis</b><small>No emery stone, no steel rollers</small></div></div>
+      <div><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18c1.5-6 14.5-6 16 0z"/><path d="M8 15.5h.01M12 14h.01M16 15.5h.01" stroke-width="3"/><path d="M3 21h18"/></svg></span><div><b>Chokar kept in</b><small>Nothing removed, nothing added</small></div></div>
+      <div><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><b>South and North Delhi</b><small>Freshly milled, delivered weekly</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="mani" aria-labelledby="mani-h">
+  <div class="wrap">
+    <div class="box">
+      <div>
+        <h2 id="mani-h">We question everything. <em>Why not atta?</em></h2>
+        <p>We keep changing everything around us. Our skincare, our cooking oil, even our utensils, because we research what is best for our family. So why don't we stop and think about our atta? Its quality, where it comes from, how it is made. We just take their word for it.</p>
+      </div>
+      <div class="veer"><p class="bubble">Isse kisi ne poocha?</p><img src="img/veer-point.webp" alt="Veer, pointing" width="333" height="520"></div>
+    </div>
+  </div>
+</section>
+
+<section class="way" id="way" aria-labelledby="way-h">
+  <div class="wrap">
+    <div class="hd"><h2 id="way-h">The Atulyash way</h2><p>Freshly milled, delivered weekly.</p></div>
+    <div class="cards">
+      <div class="card"><div class="im"><img src="img/wheat-close.webp" alt="Green wheat ears in the field" width="1200" height="675"></div><div class="tx"><b>MP Sharbati</b><span>Single-origin. Never blended with other varieties.</span></div></div>
+      <div class="card"><div class="im fit" style="background:#F4EEE2"><img src="img/chakki.webp" alt="A stone chakki milling wheat into atta" width="700" height="533"></div><div class="tx"><b>Natural stone chakkis</b><span>No emery stone, no steel rollers.</span></div></div>
+      <div class="card"><div class="im"><img src="img/bowl.webp" alt="A bowl of whole wheat atta with the bran specks showing" width="600" height="470"></div><div class="tx"><b>Chokar kept in</b><span>Nothing removed, nothing added.</span></div></div>
+      <div class="card"><div class="im day" aria-hidden="true"><small>DAY 1</small><strong>Milled</strong><small>DAY 2</small><strong>Delivered</strong></div><div class="tx"><b>Milled the day before</b><span>In small batches, delivered the next morning.</span></div></div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
