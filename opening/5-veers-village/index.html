@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="data:,">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atulyash · Veer's Village</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#FFF8EE;--ink:#22204A;--soft:#4B4868;--mustard:#F2B33D;--green:#3F8F4F;--green-dk:#2C6B39;--terra:#E0714F;--indigo:#2E2A6B;--sky:#FCE3C6}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow-x:clip}
+body{background:var(--cream);color:var(--ink);font-family:"Nunito Sans",system-ui,sans-serif;font-size:20px;line-height:1.6}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto;position:relative}
+h1,h2,h3{font-family:"Baloo 2",system-ui,sans-serif;line-height:1.02;font-weight:800}
+.grain{position:relative;isolation:isolate}
+.grain::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;mix-blend-mode:multiply;opacity:.35;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .25 0 0 0 0 .2 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.label{position:absolute;z-index:5;font:700 14px/1 "Nunito Sans",sans-serif;background:#fff;color:var(--ink);border-radius:99px;padding:7px 11px;box-shadow:0 2px 0 rgba(34,32,74,.15)}
+
+header .bar{display:flex;justify-content:space-between;align-items:center;padding:16px 0;position:relative;z-index:10}
+header img{height:38px;width:auto}
+.call{display:inline-flex;align-items:center;min-height:48px;padding:0 20px;border:2px solid var(--ink);border-radius:99px;text-decoration:none;font-weight:700;font-size:18px}
+.sun{position:absolute;width:180px;height:180px;border-radius:50%;background:var(--mustard);top:-90px;left:38%;z-index:0}
+
+/* hero */
+.hero{padding:10px 0 64px;position:relative}
+.hero .grid{display:grid;gap:22px}
+.hero .hi{font:700 21px/1.2 "Baloo 2";color:#B9482A}
+.hero h1{font-size:clamp(50px,12.6vw,96px);margin-top:10px}
+.hero h1 span{color:var(--green-dk)}
+.lede{font-size:22px;color:var(--soft);margin-top:14px;max-width:26ch}
+.ctas{display:grid;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:58px;padding:0 28px;border-radius:99px;font:700 20px "Nunito Sans";text-decoration:none}
+.btn.ink{background:var(--ink);color:#fff}
+.btn.cream{background:#fff;border:2px solid var(--ink);color:var(--ink)}
+.scene{position:relative;width:min(92vw,560px);aspect-ratio:1;margin-inline:auto}
+.disc{position:absolute;inset:0;border-radius:50%;background:var(--terra);overflow:hidden}
+.disc svg{position:absolute;left:0;right:0;bottom:0;width:100%}
+.scene .veer{position:absolute;left:50%;bottom:0;height:96%;width:auto;transform:translateX(-46%);z-index:2}
+.scene .label{right:4%;top:8%}
+.bubble-sm{position:absolute;left:-2%;top:16%;z-index:3;background:#fff;border-radius:22px 22px 22px 4px;padding:10px 16px;font:800 22px/1.1 "Baloo 2";box-shadow:0 3px 0 rgba(34,32,74,.18)}
+
+/* manifesto */
+.manifesto{padding:72px 0;background:var(--sky);border-radius:48px 48px 0 0}
+.manifesto .grid{display:grid;gap:30px}
+.manifesto h2{font-size:clamp(40px,9.6vw,74px)}
+.manifesto h2 em{font-style:normal;color:var(--terra);background:linear-gradient(transparent 62%,rgba(242,179,61,.6) 62%);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.chip{display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:99px;padding:8px 16px;font-weight:700;font-size:18px}
+.chip.q{background:var(--indigo);color:#fff}
+.manifesto .body{font-size:21px;margin-top:22px;max-width:36ch}
+.talk{position:relative;display:grid;justify-items:center}
+.big-bubble{background:var(--indigo);color:#fff;border-radius:40px;padding:28px 30px 32px;font:800 clamp(36px,9vw,58px)/1.05 "Baloo 2";text-align:center;position:relative;max-width:440px}
+.big-bubble::after{content:"";position:absolute;left:50%;bottom:-26px;border:16px solid transparent;border-top:20px solid var(--indigo);transform:translateX(-20px)}
+.big-bubble small{display:block;font:600 18px/1.4 "Nunito Sans";color:#E6E4FA;margin-top:10px}
+.talk .circ{width:min(80vw,340px);aspect-ratio:1;border-radius:50%;background:var(--mustard);overflow:hidden;margin-top:30px;position:relative}
+.talk .circ img{position:absolute;left:50%;bottom:0;width:92%;transform:translateX(-50%)}
+.talk .label{right:6%;bottom:12%}
+
+/* way */
+.way{padding:84px 0 96px;background:var(--cream)}
+.way h2{font-size:clamp(44px,10.4vw,80px)}
+.way .intro{font-size:21px;color:var(--soft);margin-top:10px;max-width:32ch}
+.row{list-style:none;display:grid;gap:16px;margin-top:40px}
+.card{background:#fff;border-radius:28px;padding:24px 22px;display:grid;grid-template-columns:88px 1fr;gap:18px;align-items:center;position:relative}
+.card .ci{width:88px;height:88px;border-radius:50%;background:var(--sky);display:grid;place-items:center;overflow:hidden;position:relative}
+.card .ci img{width:94%;height:94%;object-fit:contain}
+.card .ci svg{width:54%;fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.card .no{font:700 20px/1 "Baloo 2";color:var(--terra)}
+.card h3{font-size:28px;margin-top:2px}
+.card p{font-size:19px;color:var(--soft);line-height:1.5;margin-top:4px}
+.card.hot{background:var(--indigo);color:#fff}
+.card.hot p{color:#E6E4FA}
+.card.hot .no{color:var(--mustard)}
+.card.hot .ci{background:var(--mustard)}
+.card .label{right:16px;top:-12px}
+
+@media (min-width:960px){
+  header .bar{padding:24px 0}
+  header img{height:46px}
+  .sun{width:260px;height:260px;top:-130px}
+  .hero{padding:30px 0 110px}
+  .hero .grid{grid-template-columns:1fr 1fr;align-items:center;gap:50px}
+  .ctas{grid-auto-flow:column;justify-content:start}
+  .manifesto{padding:120px 0}
+  .manifesto .grid{grid-template-columns:1.1fr 1fr;align-items:center;gap:60px}
+  .way{padding:120px 0 140px}
+  .row{grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{grid-template-columns:1fr;padding:30px 28px 34px;align-content:start}
+  .card .ci{width:120px;height:120px}
+}
+</style>
+</head>
+<body>
+<header><div class="sun grain" aria-hidden="true"></div><div class="wrap bar"><img src="../shared/wordmark.png" alt="Atulyash"><a class="call" href="tel:+919818588996">Call us</a></div></header>
+
+<main>
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap grid">
+    <div>
+      <p class="hi">Freshly milled. Delivered weekly.</p>
+      <h1 id="h1">Atta in its <span>purest</span> form</h1>
+      <p class="lede">Ours is milled slowly on natural stone. Fresh, every week.</p>
+      <div class="ctas">
+        <a class="btn ink" href="#packs">See packs and prices</a>
+        <a class="btn cream" href="#area">Check delivery to my area</a>
+      </div>
+    </div>
+    <div class="scene">
+      <div class="disc grain">
+        <svg viewBox="0 0 400 220" aria-hidden="true">
+          <path d="M0 90C80 60 160 70 220 84s130 0 180-24V220H0z" fill="#F2B33D"/>
+          <path d="M0 140c90-30 180-26 260-8s110 10 140 0V220H0z" fill="#E59E2C"/>
+          <g stroke="#B8761C" stroke-width="3" stroke-linecap="round" fill="none">
+            <path d="M40 220v-60M70 220v-72M100 220v-58M300 220v-66M330 220v-80M360 220v-60"/>
+          </g>
+          <g fill="#B8761C"><ellipse cx="40" cy="156" rx="5" ry="11"/><ellipse cx="70" cy="144" rx="5" ry="11"/><ellipse cx="100" cy="158" rx="5" ry="11"/><ellipse cx="300" cy="150" rx="5" ry="11"/><ellipse cx="330" cy="136" rx="5" ry="11"/><ellipse cx="360" cy="156" rx="5" ry="11"/></g>
+          <circle cx="320" cy="40" r="22" fill="#FFF8EE" opacity=".9"/>
+        </svg>
+      </div>
+      <img class="veer" src="img/veer-flat.webp" alt="Veer, a village boy in a yellow kurta and green headband, asking a question">
+      <span class="label">Concept art</span>
+    </div>
+  </div>
+</section>
+
+<section class="manifesto grain" aria-labelledby="h2m">
+  <div class="wrap grid">
+    <div>
+      <h2 id="h2m">We question everything. <em>Why not atta?</em></h2>
+      <div class="chips" aria-hidden="true"><span class="chip">✓ Skincare</span><span class="chip">✓ Cooking oil</span><span class="chip">✓ Utensils</span><span class="chip q">? Atta</span></div>
+      <p class="body">We keep changing everything around us. Our skincare, our cooking oil, even our utensils, because we research what is best for our family. So why don't we stop and think about our atta? Its quality, where it comes from, how it is made. We just take their word for it.</p>
+    </div>
+    <div class="talk">
+      <p class="big-bubble" lang="hi-Latn">Isse kisi ne poocha?<small>Did anyone ask about this one?</small></p>
+      <div class="circ grain"><img src="img/veer-flat-think.webp" alt="Veer, finger on his chin, holding a few wheat grains"></div>
+      <span class="label">Concept art</span>
+    </div>
+  </div>
+</section>
+
+<section class="way" aria-labelledby="h2w">
+  <div class="wrap">
+    <h2 id="h2w">The Atulyash way</h2>
+    <p class="intro">Six choices behind our atta. Nothing hidden.</p>
+    <ol class="row">
+      <li class="card"><span class="label">Illustration</span><div class="ci grain"><img src="../shared/sharbati-wheat-sack.webp" alt=""></div><div><span class="no">01</span><h3>The wheat</h3><p>Single-origin MP Sharbati. Never blended with other varieties.</p></div></li>
+      <li class="card"><div class="ci grain"><svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="18" rx="18" ry="6"/><path d="M6 18l4 16c2 6 26 6 28 0l4-16M14 26h20M16 32h16"/></svg></div><div><span class="no">02</span><h3>The cleaning</h3><p>In several stages.</p></div></li>
+      <li class="card hot"><span class="label">Illustration</span><div class="ci grain"><img src="../shared/stone-chakki-milling.webp" alt=""></div><div><span class="no">03</span><h3>The stone</h3><p>Natural stone chakkis. No emery stone, no steel rollers.</p></div></li>
+      <li class="card"><span class="label">Illustration</span><div class="ci grain"><img src="../shared/stone-chakki-chokar-retained.webp" alt=""></div><div><span class="no">04</span><h3>The chokar</h3><p>Chokar kept in. Nothing removed, nothing added.</p></div></li>
+      <li class="card"><span class="label">Illustration</span><div class="ci grain"><img src="../shared/pack-2kg-day1-milled-day2-delivered.webp" alt=""></div><div><span class="no">05</span><h3>The milling day</h3><p>Milled in small batches the day before, delivered the next morning. Packed with minimal handling.</p></div></li>
+      <li class="card"><div class="ci grain"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="12" cy="34" r="6"/><circle cx="38" cy="34" r="6"/><path d="M12 34h10l6-12h6l4 12M28 22l-4-8h-6M34 22h6"/></svg></div><div><span class="no">06</span><h3>The delivery</h3><p>We deliver with our own riders.</p></div></li>
+    </ol>
+  </div>
+</section>
+</main>
+</body>
+</html>

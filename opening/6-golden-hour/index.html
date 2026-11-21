@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="data:,">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atulyash · Golden Hour</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+:root{--soil:#2B2416;--olive:#4F5D18;--olive-dk:#3C4712;--chart:#C8C42A;--wheat:#E9D3A0;--cream:#FAF5EA;--ink:#221D12;--soft:#4F4734}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow-x:clip}
+body{background:var(--cream);color:var(--ink);font-family:"Schibsted Grotesk",system-ui,sans-serif;font-size:20px;line-height:1.6}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto;position:relative}
+h1,h2,h3{font-weight:700;line-height:1.02;letter-spacing:-.025em}
+.it{font-family:"Newsreader",Georgia,serif;font-style:italic;font-weight:400;letter-spacing:0}
+.glass{background:rgba(255,255,255,.16);-webkit-backdrop-filter:blur(18px) saturate(1.3);backdrop-filter:blur(18px) saturate(1.3);border:1px solid rgba(255,255,255,.38)}
+.glass.dark{background:rgba(34,29,18,.42);border-color:rgba(255,255,255,.22)}
+.label{position:absolute;z-index:6;font:700 14px/1 "Schibsted Grotesk",sans-serif;background:rgba(34,29,18,.72);color:#fff;border-radius:99px;padding:7px 11px}
+
+/* hero */
+.hero{position:relative;min-height:100svh;color:#fff;display:flex;flex-direction:column}
+.hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 50%}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(25,20,10,.5) 0%,rgba(25,20,10,.2) 30%,rgba(25,20,10,.82) 100%)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(25,20,10,.55),rgba(25,20,10,0) 70%)}
+.hero .label{right:16px;top:86px}
+.top{position:relative;z-index:3;display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+.pill{display:inline-flex;align-items:center;border-radius:99px;padding:10px 18px}
+.pill img{height:28px;width:auto}
+.call{display:inline-flex;align-items:center;min-height:48px;padding:0 20px;border-radius:99px;text-decoration:none;font-weight:700;font-size:18px;color:#fff}
+.hero .copy{position:relative;z-index:3;margin-top:auto;padding:40px 0 120px}
+.hero h1{font-size:clamp(52px,13.4vw,116px);font-weight:800;text-shadow:0 2px 24px rgba(0,0,0,.25)}
+.lede{font-size:22px;max-width:26ch;margin-top:16px;color:#FFF8E6}
+.area{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 24px;border-radius:99px;margin-top:24px;color:#fff;text-decoration:none;font-weight:700;font-size:19px}
+.round{position:absolute;z-index:4;right:16px;bottom:-62px;width:136px;height:136px;border-radius:50%;background:var(--chart);color:var(--soil);display:grid;place-items:center;text-align:center;font:800 19px/1.15 "Schibsted Grotesk";text-decoration:none;padding:14px;box-shadow:0 18px 30px -16px rgba(0,0,0,.5)}
+.fresh{display:none}
+
+.blocks{display:grid}
+.blocks .b{padding:28px 16px}
+.blocks .b1:first-child{padding-top:84px}
+.blocks .b1{background:#fff}
+.blocks .b2{background:var(--olive);color:#fff;padding:36px 16px}
+.blocks .big{font-size:clamp(40px,10vw,64px);font-weight:800;letter-spacing:-.03em;color:var(--olive-dk);line-height:1}
+.blocks .b p{font-size:19px;margin-top:6px}
+.blocks .b2 p{font-size:22px;line-height:1.45;margin:0;color:#F5F2DD}
+
+/* manifesto */
+.manifesto{position:relative;overflow:clip;color:#fff;padding:0 0 48px;background:var(--soil)}
+.manifesto .bg{position:relative;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:85% 30%}
+.mcard{margin-top:-48px;position:relative}
+.manifesto .label{right:16px;top:16px}
+.manifesto .wrap{z-index:2}
+.mcard{border-radius:28px;padding:30px 24px}
+.mcard h2{font-size:clamp(38px,9.4vw,68px);font-weight:800}
+.mcard .body{font-size:21px;margin-top:18px;color:#FFF8E6}
+.veerask{display:inline-flex;align-items:center;gap:12px;margin-top:26px;background:var(--chart);color:var(--soil);border-radius:99px;padding:12px 22px 12px 12px;font:500 clamp(24px,6vw,32px)/1.1 "Newsreader",serif;font-style:italic}
+.veerask i{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--soil);color:var(--chart);font:800 16px "Schibsted Grotesk";font-style:normal}
+.mspace{display:none}
+
+/* way */
+.way{position:relative;padding:84px 0 0}
+.way .head h2{font-size:clamp(44px,10.4vw,84px);font-weight:800;color:var(--soil)}
+.way .head p{font-size:21px;color:var(--soft);margin-top:10px}
+.iconband{position:relative;margin-top:36px;border-radius:28px;overflow:hidden}
+.iconband .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.iconband .label{right:12px;top:12px}
+.icons{position:relative;z-index:2;margin:56px 14px;border-radius:28px;display:grid;grid-template-columns:repeat(3,1fr);list-style:none;color:#fff}
+.icons li{display:grid;justify-items:center;gap:6px;padding:18px 6px;font-weight:700;font-size:16px;text-align:center}
+.icons svg{width:40px;height:40px;fill:none;stroke:#fff;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.tiles{list-style:none;display:grid;margin-top:28px}
+.tile{padding:40px 22px;min-height:220px;display:flex;flex-direction:column;justify-content:flex-end;position:relative}
+.tile .no{font:400 20px "Newsreader";font-style:italic;opacity:.85}
+.tile h3{font-size:34px;margin-top:6px}
+.tile p{font-size:20px;margin-top:8px;line-height:1.45;max-width:30ch}
+.t1{background:var(--olive);color:#fff}.t1 p{color:#F2EFD8}
+.t2{background:var(--wheat);color:var(--ink)}
+.t3{background:var(--soil);color:#fff}.t3 p{color:#E9E1CC}
+.t4{background:var(--chart);color:var(--soil)}
+.t5{background:#fff;color:var(--ink)}
+.t6{background:var(--olive-dk);color:#fff}.t6 p{color:#EDEBD2}
+.tile figure{position:absolute;right:12px;top:12px;width:120px}
+.tile figure .label{position:static;display:inline-block;margin-top:4px;font-size:12px;padding:5px 8px}
+
+@media (min-width:960px){
+  .top{padding:26px 0}
+  .pill img{height:34px}
+  .hero .copy{padding:60px 0 150px}
+  .hero .label{top:110px;right:32px}
+  .round{right:calc(50% - 600px + 380px);bottom:-80px;width:170px;height:170px;font-size:21px}
+  .fresh{display:block;position:absolute;z-index:3;right:0;bottom:120px;width:340px;border-radius:24px;padding:22px 24px;color:#fff}
+  .fresh b{display:block;font-size:24px;line-height:1.2}
+  .fresh p{font-size:18px;margin-top:6px;color:#FFF8E6}
+  .blocks{grid-template-columns:1fr 1fr 1.3fr}
+  .blocks .b,.blocks .b1:first-child{padding:70px 48px}
+  .blocks .b1:first-child{padding-left:calc(50vw - 600px + 16px)}
+  .blocks .b2{padding-top:70px;padding-right:calc(50vw - 600px + 16px)}
+  .manifesto{padding:140px 0;background:none}
+  .manifesto .bg{position:absolute;inset:0;height:100%;aspect-ratio:auto;object-position:80% 30%}
+  .manifesto::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(25,20,10,.7),rgba(25,20,10,.2));z-index:1}
+  .mcard{margin-top:0}
+  .manifesto .wrap{display:grid;grid-template-columns:600px 1fr}
+  .mcard{padding:44px 44px}
+  .mspace{display:none}
+  .way{padding:130px 0 0}
+  .icons{grid-template-columns:repeat(6,1fr);margin:70px auto;max-width:1000px;border-radius:99px;padding:6px 20px}
+  .icons li{font-size:17px}
+  .tiles{grid-template-columns:repeat(3,1fr)}
+  .tile{min-height:340px;padding:48px 40px}
+  .tile figure{width:150px;right:20px;top:20px}
+}
+</style>
+</head>
+<body>
+<main>
+<section class="hero" aria-labelledby="h1">
+  <img class="bg" src="img/field.webp" alt="A golden wheat field at sunset">
+  <span class="label">Concept image</span>
+  <div class="wrap top">
+    <span class="pill glass dark"><img src="../shared/wordmark-white.png" alt="Atulyash"></span>
+    <a class="call glass dark" href="tel:+919818588996">Call us</a>
+  </div>
+  <div class="wrap copy">
+    <h1 id="h1">Atta in its <span class="it">purest</span> form</h1>
+    <p class="lede">Ours is milled slowly on natural stone. Fresh, every week.</p>
+    <a class="area glass dark" href="#area">Check delivery to my area</a>
+    <div class="fresh glass dark"><b>Milled the day before.</b><p>Milled in small batches the day before, delivered the next morning.</p></div>
+    <a class="round" href="#packs">See packs and prices</a>
+  </div>
+</section>
+
+<div class="blocks">
+  <div class="b b1"><span class="big">₹120</span><p>a kilo, in packs from 2 kg</p></div>
+  <div class="b b1"><span class="big">Weekly</span><p>or just once. A weekly plan can be skipped or paused.</p></div>
+  <div class="b b2"><p>Freshly milled. Delivered weekly. By our own riders, to select South and North Delhi pincodes.</p></div>
+</div>
+
+<section class="manifesto" aria-labelledby="h2m">
+  <img class="bg" src="img/veer-field.webp" alt="Veer standing in a golden wheat field, smiling with a question in his eyes">
+  <span class="label">Concept art</span>
+  <div class="wrap">
+    <div class="mcard glass dark">
+      <h2 id="h2m">We question everything. <span class="it">Why not atta?</span></h2>
+      <p class="body">We keep changing everything around us. Our skincare, our cooking oil, even our utensils, because we research what is best for our family. So why don't we stop and think about our atta? Its quality, where it comes from, how it is made. We just take their word for it.</p>
+      <p class="veerask" lang="hi-Latn"><i aria-hidden="true">V</i>Isse kisi ne poocha?</p>
+    </div>
+    <div class="mspace"></div>
+  </div>
+</section>
+
+<section class="way" aria-labelledby="h2w">
+  <div class="wrap head">
+    <h2 id="h2w">The Atulyash way</h2>
+    <p>Six choices, from the field to your door.</p>
+  </div>
+  <div class="wrap iconband">
+    <img class="bg" src="img/closeup.webp" alt="">
+    <span class="label">Concept image</span>
+    <ul class="icons glass dark" aria-label="The six choices">
+      <li><svg viewBox="0 0 48 48"><path d="M24 44V12M24 18c-6-3-8-9-7-14 5 2 7 7 7 14zm0 0c6-3 8-9 7-14-5 2-7 7-7 14zM24 28c-6-3-8-9-7-14 5 2 7 7 7 14zm0 0c6-3 8-9 7-14-5 2-7 7-7 14z"/></svg>Wheat</li>
+      <li><svg viewBox="0 0 48 48"><ellipse cx="24" cy="18" rx="18" ry="6"/><path d="M6 18l4 16c2 6 26 6 28 0l4-16M14 26h20M16 32h16"/></svg>Cleaning</li>
+      <li><svg viewBox="0 0 48 48"><ellipse cx="24" cy="20" rx="18" ry="6"/><path d="M6 20v8c0 4 8 6 18 6s18-2 18-6v-8"/><ellipse cx="24" cy="20" rx="4" ry="1.5"/></svg>Stone</li>
+      <li><svg viewBox="0 0 48 48"><path d="M24 6c10 8 10 28 0 38-10-10-10-30 0-38zM24 10v30"/></svg>Chokar</li>
+      <li><svg viewBox="0 0 48 48"><rect x="8" y="10" width="32" height="32" rx="3"/><path d="M8 18h32M16 6v8M32 6v8M18 30l4 4 8-8"/></svg>Milling day</li>
+      <li><svg viewBox="0 0 48 48"><circle cx="12" cy="34" r="6"/><circle cx="38" cy="34" r="6"/><path d="M12 34h10l6-12h6l4 12M28 22l-4-8h-6M34 22h6"/></svg>Delivery</li>
+    </ul>
+  </div>
+  <ol class="tiles">
+    <li class="tile t1"><span class="no">01</span><h3>The wheat</h3><p>Single-origin MP Sharbati. Never blended with other varieties.</p></li>
+    <li class="tile t2"><span class="no">02</span><h3>The cleaning</h3><p>In several stages.</p></li>
+    <li class="tile t3"><span class="no">03</span><h3>The stone</h3><p>Natural stone chakkis. No emery stone, no steel rollers.</p></li>
+    <li class="tile t4"><span class="no">04</span><h3>The chokar</h3><p>Chokar kept in. Nothing removed, nothing added.</p></li>
+    <li class="tile t5"><span class="no">05</span><h3>The milling day</h3><p>Milled in small batches the day before, delivered the next morning. Packed with minimal handling.</p></li>
+    <li class="tile t6"><span class="no">06</span><h3>The delivery</h3><p>We deliver with our own riders.</p></li>
+  </ol>
+</section>
+</main>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="data:,">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atulyash · Rasoi Collage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hind:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --flour:#FAF7F0; --card:#FFFFFF; --ink:#1F2A1C; --soft:#4A5446;
+  --leaf:#3E7B27; --leaf-dk:#2F5F1D; --turmeric:#E8A317; --chilli:#C8442B; --line:#D9D3C3;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow-x:clip}
+body{background:var(--flour);color:var(--ink);font-family:"Hind",system-ui,sans-serif;font-size:20px;line-height:1.6}
+img{display:block;max-width:100%}
+h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.08;letter-spacing:-.01em}
+a{color:inherit}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto;position:relative}
+.label{position:absolute;z-index:5;font:600 14px/1 "Hind",sans-serif;background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:99px;padding:6px 10px 5px;white-space:nowrap}
+
+/* doodles */
+.doodles{position:absolute;inset:0;pointer-events:none;color:#CFC7B2}
+.doodles svg{position:absolute;width:120px;height:120px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* header */
+header{position:relative;z-index:10}
+.bar{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.bar img{height:40px;width:auto}
+.call{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 18px;border:2px solid var(--leaf);border-radius:99px;font-weight:600;text-decoration:none;color:var(--leaf-dk);font-size:18px}
+
+/* hero */
+.hero{position:relative;padding:8px 0 72px}
+.hero .wrap{display:grid;gap:28px}
+.hero h1{font-size:clamp(46px,11vw,92px);font-weight:800}
+.hero h1 em{font-style:normal;color:var(--leaf)}
+.lede{font-size:22px;color:var(--soft);max-width:30ch;margin-top:16px}
+.ctas{display:grid;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 26px;border-radius:99px;font-weight:600;font-size:20px;text-decoration:none}
+.btn.solid{background:var(--leaf-dk);color:#fff}
+.btn.ghost{background:#fff;border:2px solid var(--ink);color:var(--ink)}
+.plate{position:relative;width:min(88vw,520px);aspect-ratio:1;margin-inline:auto}
+.plate .disc{position:absolute;inset:6%;border-radius:50%;background:#fff;box-shadow:0 30px 60px -30px rgba(60,50,20,.35)}
+.plate .roti{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
+.plate .sprig{position:absolute;width:52%;right:-22%;top:-14%;transform:rotate(18deg);mix-blend-mode:multiply}
+.plate .label{left:4%;bottom:6%}
+.leaf{position:absolute;z-index:2;pointer-events:none}
+.leaf svg{width:100%;height:100%}
+
+/* manifesto */
+.manifesto{position:relative;padding:72px 0;background:#fff;border-block:1px solid var(--line)}
+.manifesto .wrap{z-index:1}
+.kicker{font:600 16px/1 "Hind";letter-spacing:.14em;text-transform:uppercase;color:var(--leaf-dk)}
+.manifesto h2{font-size:clamp(36px,8.4vw,68px);font-weight:800;margin-top:14px;max-width:16ch}
+.things{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:36px 0}
+.thing{text-align:center;font-weight:500;font-size:18px}
+.thing .circle{width:100%;aspect-ratio:1;border-radius:50%;background:var(--flour);border:2px dashed var(--line);display:grid;place-items:center;margin-bottom:10px;position:relative}
+.thing .circle svg{width:44%;height:44%;fill:none;stroke:var(--soft);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.thing.atta .circle{border:3px solid var(--turmeric);background:#fff;overflow:visible}
+.thing.atta img{width:96%;mix-blend-mode:multiply;border-radius:50%}
+.q{position:absolute;right:-6px;top:-6px;width:52px;height:52px;border-radius:50%;background:var(--turmeric);color:var(--ink);font:800 32px/52px "Bricolage Grotesque";text-align:center}
+.thing.atta .label{left:50%;transform:translateX(-50%);bottom:-6px}
+.body{font-size:21px;max-width:38ch}
+.veer-row{display:grid;grid-template-columns:auto 1fr;align-items:end;gap:6px;margin-top:40px}
+.veer-row img{width:150px;filter:drop-shadow(0 0 0 #fff) drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff) drop-shadow(0 12px 16px rgba(0,0,0,.18));transform:rotate(-4deg)}
+.bubble{position:relative;background:var(--leaf-dk);color:#fff;border-radius:28px 28px 28px 6px;padding:18px 22px;font:700 clamp(24px,6vw,34px)/1.2 "Bricolage Grotesque";margin-bottom:90px}
+
+/* way */
+.way{position:relative;padding:80px 0 96px}
+.way .wrap{z-index:1}
+.way h2{font-size:clamp(40px,9vw,76px);font-weight:800}
+.way .intro{font-size:21px;color:var(--soft);margin-top:12px;max-width:32ch}
+.steps{display:grid;gap:18px;margin-top:40px;list-style:none}
+.step{display:grid;grid-template-columns:112px 1fr;gap:18px;align-items:center;background:#fff;border-radius:28px;padding:16px 20px 16px 16px;border:1px solid var(--line);position:relative}
+.step .ph{width:112px;aspect-ratio:1;border-radius:50%;background:var(--flour);display:grid;place-items:center;overflow:hidden;position:relative}
+.step .ph img{width:92%;height:92%;object-fit:contain}
+.step .ph svg{width:56%;height:56%;fill:none;stroke:var(--leaf-dk);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.step h3{font-size:24px;font-weight:700;padding-right:28px}
+.step p{font-size:19px;color:var(--soft);line-height:1.5;margin-top:4px}
+.step .n{position:absolute;right:16px;top:12px;font:700 16px/1 "Bricolage Grotesque";color:var(--leaf)}
+.step .il{left:12px;top:-12px}
+
+.way-leaf{top:-60px}
+@media (min-width:900px){
+  .way-leaf{top:30px}
+  .step h3{padding-right:0}
+  body{font-size:21px}
+  .bar{padding:26px 0}
+  .bar img{height:48px}
+  .hero{padding:24px 0 120px}
+  .hero .wrap{grid-template-columns:1.05fr 1fr;align-items:center;gap:40px}
+  .ctas{grid-auto-flow:column;justify-content:start}
+  .manifesto{padding:120px 0}
+  .manifesto .grid{display:grid;grid-template-columns:1.1fr 1fr;gap:72px;align-items:center}
+  .things{grid-template-columns:repeat(4,1fr);margin:0}
+  .veer-row img{width:200px}
+  .way{padding:120px 0 140px}
+  .steps{grid-template-columns:repeat(3,1fr);gap:24px}
+  .step{grid-template-columns:1fr;text-align:center;padding:28px 24px 30px;justify-items:center}
+  .step .ph{width:160px}
+  .step:nth-child(2),.step:nth-child(5){transform:translateY(36px)}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <img src="../shared/wordmark.png" alt="Atulyash">
+    <a class="call" href="tel:+919818588996">Call us</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="h1">
+  <div class="doodles" aria-hidden="true">
+    <svg style="left:-20px;top:40px" viewBox="0 0 100 100"><path d="M50 95V20M50 30c-10-6-14-16-12-24 8 4 12 12 12 24zm0 0c10-6 14-16 12-24-8 4-12 12-12 24zM50 46c-10-6-14-16-12-24 8 4 12 12 12 24zm0 0c10-6 14-16 12-24-8 4-12 12-12 24zM50 62c-10-6-14-16-12-24 8 4 12 12 12 24zm0 0c10-6 14-16 12-24-8 4-12 12-12 24z"/></svg>
+    <svg style="right:4%;bottom:10px" viewBox="0 0 100 100"><path d="M10 70l64-50M80 15l8 8M18 78l-8-8"/><circle cx="34" cy="74" r="20"/></svg>
+  </div>
+  <div class="wrap">
+    <div>
+      <h1 id="h1">Atta in its <em>purest</em> form</h1>
+      <p class="lede">Ours is milled slowly on natural stone. Fresh, every week.</p>
+      <div class="ctas">
+        <a class="btn solid" href="#packs">See packs and prices</a>
+        <a class="btn ghost" href="#area">Check delivery to my area</a>
+      </div>
+    </div>
+    <div class="plate">
+      <div class="disc"></div>
+      <img class="roti" src="img/roti-plate.webp" alt="A stack of fresh rotis on a steel thali">
+      <img class="sprig" src="img/wheat-sprig.webp" alt="">
+      <span class="label">Concept image</span>
+    </div>
+  </div>
+  <div class="leaf" style="width:120px;height:120px;left:-38px;bottom:-40px" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M8 92C10 40 50 8 94 6 92 52 56 92 8 92z" fill="#3E7B27"/><path d="M14 86C40 60 62 36 86 14" stroke="#2F5F1D" stroke-width="3" fill="none"/></svg></div>
+</section>
+
+<section class="manifesto" aria-labelledby="h2m">
+  <div class="doodles" aria-hidden="true">
+    <svg style="right:2%;top:30px" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40"/><circle cx="50" cy="50" r="10"/><path d="M50 10v30M90 50H60M50 90V60M10 50h30"/></svg>
+  </div>
+  <div class="wrap grid">
+    <div>
+      <p class="kicker">Think about it</p>
+      <h2 id="h2m">We question everything. Why not atta?</h2>
+      <p class="body" style="margin-top:22px">We keep changing everything around us. Our skincare, our cooking oil, even our utensils, because we research what is best for our family. So why don't we stop and think about our atta? Its quality, where it comes from, how it is made. We just take their word for it.</p>
+    </div>
+    <div>
+      <div class="things">
+        <div class="thing"><div class="circle"><svg viewBox="0 0 48 48"><rect x="16" y="14" width="16" height="28" rx="4"/><path d="M20 14V8h8v6M20 24h8"/></svg></div>Our skincare</div>
+        <div class="thing"><div class="circle"><svg viewBox="0 0 48 48"><path d="M20 6h8v6l4 6v22a2 2 0 0 1-2 2H18a2 2 0 0 1-2-2V18l4-6z"/><path d="M16 26h16"/></svg></div>Our cooking oil</div>
+        <div class="thing"><div class="circle"><svg viewBox="0 0 48 48"><path d="M8 22h32l-3 14a4 4 0 0 1-4 3H15a4 4 0 0 1-4-3z"/><path d="M40 24l6-4"/></svg></div>Our utensils</div>
+        <div class="thing atta"><div class="circle"><img src="img/atta-bowl.webp" alt="A bowl of whole wheat atta"><span class="q" aria-hidden="true">?</span><span class="label">Concept image</span></div>Our atta</div>
+      </div>
+      <div class="veer-row">
+        <img src="../shared/veer-think.webp" alt="Veer, thinking, with wheat grains in his hand">
+        <p class="bubble" lang="hi-Latn">Isse kisi ne poocha?</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="way" aria-labelledby="h2w">
+  <div class="doodles" aria-hidden="true">
+    <svg style="left:2%;top:60px" viewBox="0 0 100 100"><path d="M20 30h60l-8 50H28z"/><path d="M28 46h44M30 60h40"/></svg>
+  </div>
+  <div class="wrap">
+    <h2 id="h2w">The Atulyash way</h2>
+    <p class="intro">Every choice behind our atta, out in the open.</p>
+    <ol class="steps">
+      <li class="step"><span class="n">01</span><span class="label il">Illustration</span><div class="ph"><img src="../shared/sharbati-wheat-sack.webp" alt=""></div><div><h3>The wheat</h3><p>Single-origin MP Sharbati. Never blended with other varieties.</p></div></li>
+      <li class="step"><span class="n">02</span><div class="ph"><svg viewBox="0 0 48 48"><ellipse cx="24" cy="18" rx="18" ry="6"/><path d="M6 18l4 16c2 6 26 6 28 0l4-16M14 26h20M16 32h16"/></svg></div><div><h3>The cleaning</h3><p>In several stages.</p></div></li>
+      <li class="step"><span class="n">03</span><span class="label il">Illustration</span><div class="ph"><img src="../shared/stone-chakki-milling.webp" alt=""></div><div><h3>The stone</h3><p>Natural stone chakkis. No emery stone, no steel rollers.</p></div></li>
+      <li class="step"><span class="n">04</span><span class="label il">Illustration</span><div class="ph"><img src="../shared/stone-chakki-chokar-retained.webp" alt=""></div><div><h3>The chokar</h3><p>Chokar kept in. Nothing removed, nothing added.</p></div></li>
+      <li class="step"><span class="n">05</span><span class="label il">Illustration</span><div class="ph"><img src="../shared/pack-2kg-day1-milled-day2-delivered.webp" alt=""></div><div><h3>The milling day</h3><p>Milled in small batches the day before, delivered the next morning. Packed with minimal handling.</p></div></li>
+      <li class="step"><span class="n">06</span><div class="ph"><svg viewBox="0 0 48 48"><circle cx="12" cy="34" r="6"/><circle cx="38" cy="34" r="6"/><path d="M12 34h10l6-12h6l4 12M28 22l-4-8h-6M34 22h6"/></svg></div><div><h3>The delivery</h3><p>We deliver with our own riders.</p></div></li>
+    </ol>
+  </div>
+  <div class="leaf way-leaf" style="width:150px;height:150px;right:-50px;transform:rotate(140deg)" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M8 92C10 40 50 8 94 6 92 52 56 92 8 92z" fill="#3E7B27"/><path d="M14 86C40 60 62 36 86 14" stroke="#2F5F1D" stroke-width="3" fill="none"/></svg></div>
+</section>
+</main>
+</body>
+</html>

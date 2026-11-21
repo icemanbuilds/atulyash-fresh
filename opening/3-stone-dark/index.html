@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="data:,">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atulyash · Stone Dark</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--basalt:#1E1B18;--deep:#141210;--gold:#E3B04B;--flour:#F3E9D6;--muted:#C2B7A4;--rule:#3A342D}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow-x:clip}
+body{background:var(--basalt);color:var(--flour);font-family:"Figtree",system-ui,sans-serif;font-size:20px;line-height:1.6}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto;position:relative}
+h1,h2,h3,.disp{font-family:"Big Shoulders Display",Impact,sans-serif;text-transform:uppercase;line-height:.92;letter-spacing:.005em}
+.label{position:absolute;z-index:5;font:700 14px/1 "Figtree",sans-serif;background:rgba(20,18,16,.85);color:var(--flour);border:1px solid #5A5146;border-radius:99px;padding:7px 11px}
+
+header{position:absolute;top:0;left:0;right:0;z-index:10}
+header .bar{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+header img{height:36px;width:auto}
+.call{display:inline-flex;align-items:center;min-height:48px;padding:0 20px;border:1.5px solid var(--gold);border-radius:99px;text-decoration:none;font-weight:700;font-size:18px;color:var(--gold)}
+
+/* hero */
+.hero{position:relative;min-height:100svh;padding:96px 0 56px;display:flex;align-items:flex-end;overflow:clip}
+.ghost{position:absolute;left:50%;top:84px;transform:translateX(-50%);font-size:58vw;color:rgba(227,176,75,.07);white-space:nowrap;pointer-events:none;z-index:0}
+.cluster{position:absolute;left:50%;top:70px;width:min(130vw,880px);transform:translateX(-50%);z-index:1;
+  -webkit-mask:radial-gradient(closest-side,#000 62%,transparent 100%);mask:radial-gradient(closest-side,#000 62%,transparent 100%)}
+.cluster img{width:100%}
+.cluster .label{right:22%;top:18%}
+.hero .copy{position:relative;z-index:2}
+.hero h1{font-size:clamp(64px,19vw,190px);font-weight:900}
+.hero h1 span{color:var(--gold);display:block}
+.lede{font-size:22px;color:var(--flour);max-width:26ch;margin-top:16px}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:62%;background:linear-gradient(transparent,var(--basalt) 52%);z-index:1}
+.ctas{display:grid;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:58px;padding:0 28px;border-radius:99px;font-weight:700;font-size:20px;text-decoration:none}
+.btn.gold{background:var(--gold);color:var(--deep)}
+.btn.out{border:2px solid var(--flour);color:var(--flour)}
+
+/* manifesto */
+.manifesto{background:var(--deep);padding:96px 0;position:relative;overflow:clip}
+.manifesto .ghost2{position:absolute;right:-4vw;bottom:-6vw;font-size:44vw;color:rgba(243,233,214,.035);pointer-events:none;line-height:.8}
+.manifesto h2{font-size:clamp(58px,15vw,150px);font-weight:900}
+.manifesto h2 em{font-style:normal;color:var(--gold)}
+.manifesto .body{font-size:21px;color:var(--muted);max-width:34ch;margin-top:26px}
+.manifesto .body strong{color:var(--flour);font-weight:500}
+.veer{position:relative;margin-top:44px;max-width:420px}
+.veer img{width:100%;border-radius:4px;-webkit-mask:linear-gradient(#000 70%,transparent);mask:linear-gradient(#000 70%,transparent)}
+.veer .label{left:12px;top:12px}
+.veer .ask{position:absolute;left:0;right:0;bottom:6px;text-align:center;font:900 clamp(40px,11vw,64px)/.95 "Big Shoulders Display";text-transform:none;color:var(--gold)}
+
+/* way */
+.way{padding:96px 0 40px}
+.way .head h2{font-size:clamp(56px,15vw,140px);font-weight:900}
+.way .head p{font-size:21px;color:var(--muted);margin-top:14px;max-width:30ch}
+.chapters{list-style:none;margin-top:56px}
+.ch{display:grid;gap:18px;padding:48px 0;border-top:1px solid var(--rule);position:relative}
+.ch .no{font:900 96px/0.8 "Big Shoulders Display";color:transparent;-webkit-text-stroke:1.5px var(--gold)}
+.ch h3{font-size:clamp(48px,13vw,110px);font-weight:900}
+.ch p{font-size:21px;color:var(--muted);max-width:30ch}
+.ch figure{position:relative;max-width:460px}
+.ch figure img{width:100%}
+.ch figure .label{left:0;top:0}
+.ch .glyph{width:120px;height:120px;fill:none;stroke:var(--gold);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+
+@media (min-width:960px){
+  header .bar{padding:28px 0}
+  header img{height:42px}
+  .hero{align-items:center;padding:120px 0 80px}
+  .ghost{font-size:46vw;top:50%;transform:translate(-50%,-50%)}
+  .cluster{left:auto;right:-120px;top:52%;transform:translateY(-50%);width:720px}
+  .hero h1{font-size:150px}
+  .hero::after{display:none}
+  .hero .copy{max-width:none}
+  .hero .copy > *{max-width:600px}
+  .ctas{grid-auto-flow:column;justify-content:start}
+  .manifesto{padding:150px 0}
+  .manifesto .grid{display:grid;grid-template-columns:1.3fr 1fr;gap:60px;align-items:end}
+  .veer{margin-top:0}
+  .way{padding:150px 0 60px}
+  .ch{grid-template-columns:140px 1fr 420px;align-items:center;gap:40px;padding:64px 0}
+  .ch:nth-child(even){grid-template-columns:140px 420px 1fr}
+  .ch:nth-child(even) figure,.ch:nth-child(even) .gwrap{order:2}
+  .ch:nth-child(even) .txt{order:3}
+  .ch .no{font-size:140px}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap bar"><img src="../shared/wordmark-white.png" alt="Atulyash"><a class="call" href="tel:+919818588996">Call us</a></div></header>
+
+<main>
+<section class="hero" aria-labelledby="h1">
+  <div class="ghost disp" aria-hidden="true">Atta</div>
+  <div class="cluster"><img src="img/cluster.webp" alt="Ripe wheat ears, fresh atta and a roti under a warm light"><span class="label">Concept image</span></div>
+  <div class="wrap copy">
+    <h1 id="h1">Atta in its <span>purest form</span></h1>
+    <p class="lede">Ours is milled slowly on natural stone. Fresh, every week.</p>
+    <div class="ctas">
+      <a class="btn gold" href="#packs">See packs and prices</a>
+      <a class="btn out" href="#area">Check delivery to my area</a>
+    </div>
+  </div>
+</section>
+
+<section class="manifesto" aria-labelledby="h2m">
+  <div class="ghost2 disp" aria-hidden="true">?</div>
+  <div class="wrap grid">
+    <div>
+      <h2 id="h2m">We question everything. <em>Why not atta?</em></h2>
+      <p class="body">We keep changing everything around us. <strong>Our skincare, our cooking oil, even our utensils,</strong> because we research what is best for our family. So why don't we stop and think about our atta? Its quality, where it comes from, how it is made. We just take their word for it.</p>
+    </div>
+    <figure class="veer">
+      <img src="img/veer-lamplit.webp" alt="Veer, thinking, holding wheat grains in a pool of warm light">
+      <span class="label">Concept art</span>
+      <figcaption class="ask" lang="hi-Latn">Isse kisi ne poocha?</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="way" aria-labelledby="h2w">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="h2w">The Atulyash way</h2>
+      <p>Six choices. Each one out in the open.</p>
+    </div>
+    <ol class="chapters">
+      <li class="ch"><span class="no" aria-hidden="true">01</span><div class="txt"><h3>The wheat</h3><p>Single-origin MP Sharbati. Never blended with other varieties.</p></div><figure><img src="../shared/sharbati-wheat-sack.webp" alt=""><span class="label">Illustration</span></figure></li>
+      <li class="ch"><span class="no" aria-hidden="true">02</span><div class="txt"><h3>The cleaning</h3><p>In several stages.</p></div><div class="gwrap"><svg class="glyph" viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="18" rx="18" ry="6"/><path d="M6 18l4 16c2 6 26 6 28 0l4-16M14 26h20M16 32h16"/></svg></div></li>
+      <li class="ch"><span class="no" aria-hidden="true">03</span><div class="txt"><h3>The stone</h3><p>Natural stone chakkis. No emery stone, no steel rollers.</p></div><figure><img src="../shared/natural-millstone-and-rock.webp" alt=""><span class="label">Illustration</span></figure></li>
+      <li class="ch"><span class="no" aria-hidden="true">04</span><div class="txt"><h3>The chokar</h3><p>Chokar kept in. Nothing removed, nothing added.</p></div><figure><img src="../shared/stone-chakki-chokar-retained.webp" alt=""><span class="label">Illustration</span></figure></li>
+      <li class="ch"><span class="no" aria-hidden="true">05</span><div class="txt"><h3>The milling day</h3><p>Milled in small batches the day before, delivered the next morning. Packed with minimal handling.</p></div><figure><img src="../shared/pack-2kg-day1-milled-day2-delivered.webp" alt=""><span class="label">Illustration</span></figure></li>
+      <li class="ch"><span class="no" aria-hidden="true">06</span><div class="txt"><h3>The delivery</h3><p>We deliver with our own riders.</p></div><div class="gwrap"><svg class="glyph" viewBox="0 0 48 48" aria-hidden="true"><circle cx="12" cy="34" r="6"/><circle cx="38" cy="34" r="6"/><path d="M12 34h10l6-12h6l4 12M28 22l-4-8h-6M34 22h6"/></svg></div></li>
+    </ol>
+  </div>
+</section>
+</main>
+</body>
+</html>
