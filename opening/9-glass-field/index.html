@@ -18,7 +18,7 @@ body{margin:0;color:#fff;font:500 16.3px/1.6 Montserrat,system-ui,sans-serif;-we
 img{display:block;max-width:100%;height:auto}
 a{color:inherit}
 a:focus-visible,summary:focus-visible{outline:3px solid #fff;outline-offset:3px;border-radius:10px}
-.bg{position:absolute;top:0;left:0;right:0;height:160vh;height:160lvh;z-index:-2;background:var(--deep);will-change:transform;pointer-events:none;-webkit-mask-image:linear-gradient(#000 55%,transparent);mask-image:linear-gradient(#000 55%,transparent)}
+.bg{position:absolute;top:0;left:0;right:0;height:200vh;height:200lvh;z-index:-2;background:var(--deep);will-change:transform;pointer-events:none;-webkit-mask-image:linear-gradient(#000 92%,transparent);mask-image:linear-gradient(#000 92%,transparent)}
 .bg img{width:100%;height:100%;object-fit:cover}
 .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,25,10,.25),rgba(5,25,10,.1) 40%,rgba(5,25,10,.35))}
 .wrap{max-width:1180px;margin:0 auto;padding:0 18px}
@@ -103,7 +103,7 @@ h2{font-size:clamp(34px,9vw,54px);line-height:1.12}
 </style>
 </head>
 <body>
-<div class="bg" aria-hidden="true"><img src="img/bg.webp" alt="" width="1080" height="1920"></div>
+<div class="bg" aria-hidden="true"><img src="img/bg-tall.webp" alt="" width="1024" height="1536"></div>
 
 <div class="wrap">
   <header class="top">
@@ -164,7 +164,7 @@ h2{font-size:clamp(34px,9vw,54px);line-height:1.12}
   </div>
 </section>
 <script>
-(function(){var bg=document.querySelector('.bg');if(!bg||matchMedia('(prefers-reduced-motion: reduce)').matches)return;var t=false;function f(){bg.style.transform='translate3d(0,'+(scrollY*.55).toFixed(1)+'px,0)';t=false}addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(f)}},{passive:true});f()})();
+(function(){var bg=document.querySelector('.bg');if(!bg)return;var still=matchMedia('(prefers-reduced-motion: reduce)').matches,k=still?0:.55,t=false;function size(){var vh=innerHeight,doc=document.documentElement.scrollHeight;bg.style.height=Math.floor(vh+(1-k)*Math.max(0,doc-vh)-2)+'px'}function f(){bg.style.transform='translate3d(0,'+(scrollY*k).toFixed(1)+'px,0)';t=false}addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(f)}},{passive:true});addEventListener('resize',function(){size();f()});addEventListener('load',size);size();f()})();
 </script>
 </body>
 </html>
