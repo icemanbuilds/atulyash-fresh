@@ -5,122 +5,141 @@
 <link rel="icon" href="data:,">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Atulyash · Botanical Label</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,500;0,600;1,400&family=Mukta:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--linen:#ECE6D3;--label:#F5F1E3;--green:#1B4314;--green-2:#2A5A1E;--ink:#1D2A17;--soft:#4A5242;--wood:#8B5E3C;--line:#D9D1B8}
+:root{--linen:#ECE6D3;--label:#F5F1E3;--green:#1B4314;--ink:#1D2A17;--soft:#4A5242;--line:#D9D1B8}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{overflow-x:clip}
-body{background:var(--linen);color:var(--ink);font-family:"Mukta",system-ui,sans-serif;font-size:20px;line-height:1.6}
-img{display:block;max-width:100%}
+body{background:var(--linen);color:var(--ink);font-family:"Mukta","Segoe UI",system-ui,sans-serif;font-size:20px;line-height:1.6}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit}
+a:focus-visible{outline:3px solid #fff;outline-offset:2px;box-shadow:0 0 0 6px #182d34}
 .wrap{width:min(1160px,100% - 32px);margin-inline:auto;position:relative}
-.serif{font-family:"Gelasio",Georgia,serif}
-.label{position:absolute;z-index:6;font:500 14px/1 "Mukta",sans-serif;background:rgba(245,241,227,.95);color:var(--ink);border:1px solid var(--line);padding:6px 10px 5px;border-radius:3px}
 .band{height:70px;background-color:var(--green);background-image:radial-gradient(circle at 14px 14px,transparent 8px,rgba(245,241,227,.13) 8.5px,rgba(245,241,227,.13) 10px,transparent 10.5px);background-size:28px 28px}
 .tab{width:52px;height:78px;background:var(--green);margin:0 auto;display:grid;place-items:end center;padding-bottom:12px}
-.tab img{width:28px}
+.tab img{width:28px;height:auto}
 .emblem{width:64px;height:64px;border:1.5px solid var(--green);border-radius:16px;display:grid;place-items:center}
-.emblem img{width:34px}
+.emblem img{width:34px;height:auto}
 .brandline{display:flex;align-items:center;gap:12px}
-.brandline img.wm{height:32px;width:auto}
+.brandline img.wm{width:140px;height:auto}
 
 /* header */
 header{position:absolute;top:0;left:0;right:0;z-index:5}
 .bar{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
 .pill{background:rgba(245,241,227,.92);border-radius:99px;padding:8px 16px;display:flex;align-items:center}
-.pill img{height:28px;width:auto}
+.pill img{width:123px;height:auto}
 .call{display:inline-flex;align-items:center;min-height:48px;padding:0 20px;background:var(--green);color:var(--label);text-decoration:none;font-weight:600;font-size:18px;border-radius:99px}
 
 /* hero */
-.photo{position:relative;height:min(132vw,620px);overflow:hidden}
-.photo .bg{width:100%;height:100%;object-fit:cover;object-position:30% 50%}
-.photo .pk{position:absolute;right:8%;bottom:9%;height:56%;width:auto;filter:drop-shadow(-12px 16px 16px rgba(50,30,10,.38))}
-.photo .label{left:12px;bottom:12px}
-.lab{position:relative;background:var(--label);margin:-70px 16px 0;box-shadow:0 24px 40px -28px rgba(50,35,15,.5);overflow:hidden;z-index:2}
-.lab .inner{padding:0 22px 26px;position:relative}
-.lab .brandline{margin-top:20px}
-.lab h1{font-family:"Gelasio",serif;font-weight:500;color:var(--ink);font-size:clamp(46px,12.6vw,74px);line-height:1.04;margin-top:18px}
+.photo{position:relative;height:clamp(360px,104vw,530px);overflow:hidden}
+.photo .bg{width:100%;height:auto;min-height:100%;max-height:100%;object-fit:cover;object-position:35% 100%}
+.photo .pk{position:absolute;right:18%;bottom:15%;width:clamp(162px,47vw,236px);height:auto;filter:drop-shadow(-12px 16px 16px rgba(50,30,10,.38))}
+
+.lab{position:relative;background:var(--label);margin:-72px 0 0;box-shadow:0 24px 40px -28px rgba(50,35,15,.5);overflow:hidden;z-index:2}
+.lab .inner{padding:0 18px 17px;position:relative}
+.lab .brandline{margin-top:14px}
+.lab h1{font-family:"Gelasio",Georgia,serif;font-weight:500;color:var(--ink);font-size:clamp(40px,11.6vw,74px);line-height:1.04;margin-top:12px}
 .lab h1 small{display:block;font-size:.5em;font-weight:400;margin-bottom:4px}
 .lab .sub{font-size:19px;font-weight:500;color:var(--ink);margin-top:10px;border-top:1px solid var(--line);padding-top:10px;max-width:24ch}
-.lab .bot{position:absolute;right:-14px;bottom:-26px;height:150px;width:auto;z-index:1;pointer-events:none}
-@media (min-width:960px){.lab .bot{height:260px;right:-22px;bottom:-30px}}
-.lab .bot-l{position:absolute;right:8px;bottom:96px;z-index:3}
-.ctas{display:grid;gap:12px;margin:26px 16px 0}
-.btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;min-height:58px;padding:0 26px;font-weight:600;font-size:20px;text-decoration:none;border-radius:99px}
+.lab .bot{display:none}
+
+.ctas{display:grid;gap:10px;margin:20px 0 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:58px;padding:8px 20px;text-align:center;font-weight:600;font-size:19px;text-decoration:none;border-radius:99px}
 .btn.g{background:var(--green);color:var(--label)}
 .btn.l{border:1.5px solid var(--green);color:var(--green)}
 
 /* manifesto */
-.manifesto{padding:70px 0}
+.manifesto{padding:50px 0}
 .tall{background:var(--label);position:relative;max-width:640px;margin:0 auto;box-shadow:0 24px 40px -30px rgba(50,35,15,.5)}
-.tall .inner{padding:24px 22px 30px;text-align:center}
-.tall .emblem{margin:0 auto}
-.tall h2{font-family:"Gelasio",serif;font-weight:500;font-size:clamp(36px,9.6vw,56px);line-height:1.1;margin-top:18px}
+.tall .inner{padding:24px 22px 30px;text-align:left}
+.tall h2{font-family:"Gelasio",Georgia,serif;font-weight:500;font-size:clamp(36px,9.6vw,56px);line-height:1.1;margin-top:18px}
 .tall h2 small{display:block;font-size:.5em;font-weight:400}
 .tall .body{font-size:20px;color:var(--soft);margin-top:16px;text-align:left}
 .veerrow{display:grid;grid-template-columns:1fr 1fr;align-items:end;gap:10px;margin-top:26px;position:relative}
 .veerrow img{width:100%}
-.veerrow .label{left:0;top:0}
-.stamp{width:100%;max-width:200px;aspect-ratio:1;border-radius:50%;border:1.5px solid var(--green);display:grid;place-items:center;align-content:center;text-align:center;padding:14px;margin:0 auto 30px;font-family:"Gelasio",serif;font-style:italic;font-size:22px;line-height:1.2;color:var(--green)}
-.stamp small{display:block;font:500 16px "Mukta";font-style:normal;color:var(--soft);margin-top:6px;letter-spacing:.06em}
+
+.stamp{width:100%;max-width:200px;aspect-ratio:1;border-radius:50%;border:1.5px solid var(--green);display:grid;place-items:center;align-content:center;text-align:center;padding:14px;margin:0 auto 12px;font-family:"Gelasio",Georgia,serif;font-style:italic;font-size:22px;line-height:1.2;color:var(--green)}
+.stamp small{display:block;font:500 17px "Mukta","Segoe UI",sans-serif;font-style:normal;color:var(--soft);margin-top:6px;letter-spacing:.06em}
 
 /* way */
 .way{position:relative;padding:70px 0 80px;background:#5E4128 url(img/table.webp) center/cover;overflow:hidden}
 .way::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(40,26,12,.55),rgba(40,26,12,.35))}
-.way .label.bgl{right:12px;top:12px}
+
 .way .wrap{z-index:2}
 .way .head{text-align:center;color:var(--label)}
 .way .head p{font-size:17px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
-.way h2{font-family:"Gelasio",serif;font-weight:500;font-size:clamp(40px,10.4vw,64px);line-height:1.05;margin-top:8px}
+.way h2{font-family:"Gelasio",Georgia,serif;font-weight:500;font-size:clamp(40px,10.4vw,64px);line-height:1.05;margin-top:8px}
 .packs{list-style:none;display:grid;gap:22px;margin-top:36px}
-.card{background:var(--label);position:relative;overflow:hidden;box-shadow:0 22px 30px -20px rgba(0,0,0,.55)}
-.card .tabs{position:absolute;left:50%;top:0;transform:translateX(-50%);width:40px;height:54px;background:var(--green);display:grid;place-items:end center;padding-bottom:8px;color:var(--label);font:600 16px "Gelasio"}
-.card .inner{padding:66px 22px 22px}
-.card h3{font-family:"Gelasio",serif;font-weight:500;font-size:30px;line-height:1.1}
-.card h3 small{display:block;font-size:.56em;font-weight:400;color:var(--soft)}
+.card{display:flex;flex-direction:column;background:var(--label);position:relative;overflow:hidden;box-shadow:0 22px 30px -20px rgba(0,0,0,.55)}
+.card .tabs{position:absolute;left:14px;top:0;width:32px;height:49px;background:var(--green);display:grid;place-items:end center;padding-bottom:8px;color:var(--label);font:600 17px "Gelasio",Georgia,serif}
+.card .inner{padding:20px 18px 20px 60px}
+.card h3{font-family:"Gelasio",Georgia,serif;font-weight:500;font-size:30px;line-height:1.1}
+.card h3 small{display:block;font-size:17px;font-weight:400;color:var(--soft)}
 .card p{font-size:19px;color:var(--ink);margin-top:10px;border-top:1px solid var(--line);padding-top:10px}
-.card .ic{position:absolute;right:18px;top:62px;width:58px;height:58px;border:1.5px solid var(--green);border-radius:50%;display:grid;place-items:center}
+.card .ic{position:absolute;right:16px;top:18px;width:48px;height:48px;border:1.5px solid var(--green);border-radius:50%;display:grid;place-items:center}
 .card .ic svg{width:30px;height:30px;fill:none;stroke:var(--green);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-.card h3,.card p{padding-right:66px}
-.card .band{height:44px}
+.card h3{padding-right:47px}
+.card .band{height:18px;margin-top:auto}
 
 @media (min-width:960px){
   .bar{padding:24px 0}
-  .photo{height:680px}
-  .photo .pk{right:14%;height:62%}
-  .hero .wrap{display:grid;grid-template-columns:480px 1fr}
-  .lab{margin:-420px 0 0;align-self:start}
-  .ctas{margin:26px 0 0;grid-auto-flow:column;justify-content:start}
+  .photo{height:636px}
+  .photo .pk{right:14%;bottom:9%;width:284px}
+  .hero-content{max-width:480px}
+  .photo .bg{object-position:35% 50%}
+  .lab{margin:-430px 0 0;align-self:start}
+  .ctas{display:flex;width:540px;gap:12px;margin:22px 0 0}
   .manifesto{padding:110px 0}
   .tall{max-width:900px}
   .tall .inner{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;text-align:left;padding:40px 48px 44px}
-  .tall .emblem{margin:0}
-  .way{padding:110px 0 120px}
+    .way{padding:110px 0 120px}
   .packs{grid-template-columns:repeat(3,1fr);gap:28px}
+}
+/* The pack and the paper label share the edge of the kitchen photograph. */
+.hero .wrap{width:min(1160px,100% - 36px)}
+.lab .tab{width:40px;height:54px;padding-bottom:8px}
+.lab .tab img{width:22px}
+.lab .emblem{width:44px;height:44px;border-radius:10px;flex:none}
+.lab .emblem img{width:26px}
+.lab .band{height:30px}
+.lab .sub{max-width:none;line-height:1.4}
+.tall .inner{text-align:left}
+@media (min-width:960px){
+  .lab .tab{width:52px;height:78px;padding-bottom:12px}
+  .lab .tab img{width:28px}
+  .lab .emblem{width:64px;height:64px;border-radius:16px}
+  .lab .emblem img{width:34px}
+  .lab .inner{padding:0 22px 26px}
+  .lab .brandline{margin-top:20px}
+  .lab .sub{max-width:30ch}
+  .lab .bot{display:block;position:absolute;right:-22px;bottom:-30px;width:117px;pointer-events:none}
+  .lab .band{height:70px}
+  .ctas .btn{padding-inline:17px}
+  .card .tabs{left:50%;transform:translateX(-50%);width:40px;height:54px}
+  .card .inner{padding:66px 22px 22px}
+  .card .ic{top:62px;width:58px;height:58px}
+  .card h3,.card p{padding-right:66px}
+  .card .band{height:44px}
 }
 </style>
 </head>
 <body>
-<header><div class="wrap bar"><span class="pill"><img src="../shared/wordmark.png" alt="Atulyash"></span><a class="call" href="tel:+919818588996">Call us</a></div></header>
+<header><div class="wrap bar"><span class="pill"><img src="../shared/wordmark.png" alt="Atulyash" width="566" height="129"></span><a class="call" href="tel:+919818588996">Call us</a></div></header>
 
 <main>
 <section class="hero" aria-labelledby="h1">
   <div class="photo">
-    <img class="bg" src="img/table.webp" alt="A wooden kitchen table by a window in morning light">
-    <img class="pk" src="../shared/pack.webp" alt="The Atulyash 2 kg atta pack">
+    <img class="bg" src="img/table.webp" alt="A wooden kitchen table by a window in morning light" width="1536" height="1024">
+    <img class="pk" src="../shared/pack.webp" alt="The Atulyash 2 kg atta pack" width="900" height="1334">
   </div>
   <div class="wrap">
-    <div>
+    <div class="hero-content">
       <div class="lab">
-        <div class="tab"><img src="../shared/mark-white.png" alt=""></div>
+        <div class="tab"><img src="../shared/mark-white.png" alt="" width="228" height="202"></div>
         <div class="inner">
-          <div class="brandline"><span class="emblem"><img src="../shared/mark.png" alt=""></span><img class="wm" src="../shared/wordmark.png" alt=""></div>
+          <div class="brandline"><span class="emblem"><img src="../shared/mark.png" alt="" width="228" height="202"></span><img class="wm" src="../shared/wordmark.png" alt="" width="566" height="129"></div>
           <h1 id="h1"><small>Atta in its</small>purest form</h1>
           <p class="sub">Ours is milled slowly on natural stone. Fresh, every week.</p>
         </div>
-        <img class="bot" src="img/botanical.webp" alt="">
+        <img class="bot" src="img/botanical.webp" alt="" width="662" height="1474">
         <div class="band" aria-hidden="true"></div>
       </div>
       <div class="ctas">
@@ -134,15 +153,15 @@ header{position:absolute;top:0;left:0;right:0;z-index:5}
 <section class="manifesto" aria-labelledby="h2m">
   <div class="wrap">
     <div class="tall">
-      <div class="tab"><img src="../shared/mark-white.png" alt=""></div>
+      <div class="tab"><img src="../shared/mark-white.png" alt="" width="228" height="202"></div>
       <div class="inner">
         <div>
-          <span class="emblem"><img src="../shared/mark.png" alt=""></span>
+          <span class="emblem"><img src="../shared/mark.png" alt="" width="228" height="202"></span>
           <h2 id="h2m"><small>We question everything.</small>Why not atta?</h2>
           <p class="body">We keep changing everything around us. Our skincare, our cooking oil, even our utensils, because we research what is best for our family. So why don't we stop and think about our atta? Its quality, where it comes from, how it is made. We just take their word for it.</p>
         </div>
         <div class="veerrow">
-          <img src="img/veer-ink-cut.webp" alt="Veer looking closely at a wheat ear, drawn in ink and watercolour">
+          <img src="img/veer-ink-cut.webp" alt="Veer looking closely at a wheat ear, drawn in ink and watercolour" width="669" height="1482">
           <p class="stamp" lang="hi-Latn">“Isse kisi ne poocha?”<small lang="en">VEER ASKS</small></p>
         </div>
       </div>
