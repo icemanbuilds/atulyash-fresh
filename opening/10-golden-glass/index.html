@@ -18,7 +18,7 @@ body{margin:0;color:#fff;font:500 16.3px/1.6 Montserrat,system-ui,sans-serif;-we
 img{display:block;max-width:100%;height:auto}
 a{color:inherit}
 a:focus-visible,summary:focus-visible{outline:3px solid #fff;outline-offset:3px;border-radius:10px}
-.bg{position:fixed;inset:0;z-index:-2;background:var(--deep)}
+.bg{position:fixed;top:0;left:0;right:0;height:100vh;height:100lvh;z-index:-2;background:var(--deep);transform:translateZ(0);will-change:transform;pointer-events:none}
 .bg img{width:100%;height:100%;object-fit:cover}
 .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(25,14,3,.3),rgba(25,14,3,.12) 40%,rgba(25,14,3,.4))}
 .wrap{max-width:1180px;margin:0 auto;padding:0 18px}
