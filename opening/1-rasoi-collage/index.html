@@ -5,19 +5,16 @@
 <link rel="icon" href="data:,">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Atulyash · Fresh Collage</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#F8FBF5;--ink:#3A3B38;--soft:#5E605B;--green:#437A1F;--green-dk:#36661A;--leaf:#8AAA6D;--peach:#FFF1DC;--line:#E4E9DE}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{overflow-x:clip}
-body{background:var(--bg);color:var(--ink);font-family:"Poppins",system-ui,sans-serif;font-size:19px;line-height:1.65}
-img{display:block;max-width:100%}
+body{background:var(--bg);color:var(--ink);font-family:"Century Gothic","Avenir Next",system-ui,sans-serif;font-size:19px;line-height:1.65}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit}
+:focus-visible{outline:3px solid var(--green-dk);outline-offset:4px}
 .wrap{width:min(1120px,100% - 32px);margin-inline:auto;position:relative}
-h1,h2,h3{font-weight:600;line-height:1.22;color:var(--ink)}
-.label{position:absolute;z-index:6;font:500 13px/1 "Poppins",sans-serif;background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:99px;padding:6px 10px}
+h1,h2,h3{font-weight:700;line-height:1.22;color:var(--ink)}
 .cut{position:absolute;pointer-events:none;z-index:3}
 .doodle{position:absolute;pointer-events:none;z-index:0;fill:none;stroke:#D5D8D0;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 24px;border-radius:6px;font-weight:600;font-size:18px;text-decoration:none}
@@ -27,76 +24,86 @@ h1,h2,h3{font-weight:600;line-height:1.22;color:var(--ink)}
 /* header */
 header{position:relative;z-index:5}
 .bar{display:flex;align-items:center;justify-content:space-between;padding:16px 0;position:relative;z-index:6}
-.bar img{height:36px;width:auto}
+.bar img{width:clamp(116px,36vw,158px);height:auto}
 .social{display:flex;gap:8px;align-items:center}
 .sq{width:44px;height:44px;border:1px solid #CFD4C9;border-radius:6px;display:grid;place-items:center;text-decoration:none;background:#fff}
 .sq svg{width:18px;height:18px}
-.call{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:6px;background:var(--green);color:#fff;font-weight:600;font-size:16px;text-decoration:none}
+.call{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:6px;background:var(--green);color:#fff;font-weight:600;font-size:17px;text-decoration:none}
 
 /* hero */
-.hero{position:relative;padding:12px 0 40px}
-.hero .leaf-tl{width:150px;left:-50px;top:-90px;transform:rotate(150deg)}
-.hero h1{font-size:clamp(36px,9.4vw,52px)}
-.hero h1 span{color:var(--green)}
+.hero{position:relative;padding:12px 0 40px;overflow:clip}
+.hero .grid{display:grid;grid-template:"intro" "plate" "actions" / minmax(0,1fr);gap:18px}
+.hero .intro{grid-area:intro}
+.hero .actions{grid-area:actions}
+.hero .doodle{display:none}
+.hero h1{font-size:clamp(36px,10.5vw,52px);max-width:15ch}
+.hero h1 .ending{display:block;color:var(--green)}
 .lede{font-size:19px;color:var(--soft);margin-top:12px;max-width:30ch}
-.pin{margin-top:24px;display:grid;gap:10px}
-.pin label{font-size:16px;font-weight:600;color:var(--ink)}
+.pin{display:grid;gap:6px}
+.pin label{font-size:17px;font-weight:600;color:var(--ink)}
 .pin .row{display:flex;gap:8px}
-.pin input{flex:1;min-width:0;min-height:54px;border:1px solid #D3D8CD;border-radius:6px;padding:0 14px;font:400 18px "Poppins";color:var(--ink);background:#fff;box-shadow:0 6px 18px -12px rgba(0,0,0,.2)}
-.pin input::placeholder{color:#7A7D75}
-.more{margin-top:14px}
-.plate{position:relative;width:min(84vw,460px);aspect-ratio:1;margin:34px auto 0}
+.pin input{flex:1;min-width:0;min-height:54px;border:1px solid #D3D8CD;border-radius:6px;padding:0 14px;font:400 17px "Century Gothic","Avenir Next",system-ui,sans-serif;color:var(--ink);background:#fff;box-shadow:0 6px 18px -12px rgba(0,0,0,.2)}
+.pin input::placeholder{color:#62665E}
+.more{margin-top:10px}
+.pin .btn{padding-inline:18px}
+.plate{grid-area:plate;position:relative;isolation:isolate;width:min(58vw,350px);margin:0 auto}
 .plate .roti{width:100%;filter:drop-shadow(0 26px 30px rgba(40,50,30,.25))}
-.plate .leaves{width:66%;right:-30%;top:-18%;transform:rotate(14deg)}
-.plate .leaf{width:30%;left:-12%;bottom:-6%;transform:rotate(-30deg)}
-.plate .label{left:2%;top:4%}
-.mini{display:grid;gap:22px;margin-top:44px}
+.plate .leaves{width:62%;right:-19%;top:-15%;transform:rotate(14deg)}
+.plate .leaf{width:28%;left:-16%;bottom:-4%;transform:rotate(-30deg)}
+.mini{display:grid;gap:14px;margin-top:24px}
 .mini h3{font-size:19px;font-weight:600;color:var(--green-dk)}
 .mini p{font-size:17px;color:var(--soft);line-height:1.55;margin-top:2px}
 .mini div{border-left:3px solid var(--leaf);padding-left:14px}
 
 /* manifesto */
-.about{position:relative;padding:64px 0}
-.about .bowl{position:relative;width:min(76vw,380px);aspect-ratio:1;margin:0 auto}
+.about{position:relative;padding:64px 0;overflow:clip}
+.about .bowl{position:relative;width:min(68vw,380px);isolation:isolate;margin:0 auto}
 .about .bowl .atta{width:100%;filter:drop-shadow(0 22px 26px rgba(60,40,10,.22))}
-.about .bowl .round{border-radius:50%;aspect-ratio:1;object-fit:cover;border:8px solid #fff}
 .about .bowl .lv1{width:42%;left:-18%;top:-6%;transform:rotate(-40deg)}
 .about .bowl .lv2{width:36%;right:-14%;bottom:-4%;transform:rotate(130deg)}
-.about .bowl .label{right:0;top:2%}
 .about h2{font-size:clamp(30px,8vw,44px);margin-top:40px}
 .about .kick{font-size:17px;font-weight:600;color:var(--ink)}
 .veerline{display:flex;align-items:center;gap:12px;margin-top:14px}
-.veerline img{width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:top;background:var(--peach);border:2px solid #fff;box-shadow:0 4px 12px -6px rgba(0,0,0,.3)}
+.veerline img{width:64px;height:auto;border-radius:50%;background:var(--peach);border:2px solid #fff;box-shadow:0 4px 12px -6px rgba(0,0,0,.3)}
 .veerline p{font-size:22px;font-weight:600;color:var(--green-dk);line-height:1.25}
 .about .body{font-size:18px;color:var(--soft);margin-top:16px;max-width:40ch}
 .about .btn{margin-top:22px}
 .edge-r{width:120px;right:-44px;top:20px;transform:rotate(-20deg)}
 
 /* way */
-.way{position:relative;padding:40px 0 80px}
-.way .kick{text-align:center;font-size:16px;font-weight:600;color:var(--green);text-transform:uppercase;letter-spacing:.06em}
+.way{position:relative;padding:40px 0 80px;overflow:clip}
+.way .kick{text-align:center;font-size:17px;font-weight:600;color:var(--green);text-transform:uppercase;letter-spacing:.06em}
 .way h2{text-align:center;font-size:clamp(32px,8.4vw,46px);margin-top:4px}
 .way .intro{text-align:center;font-size:17px;color:var(--soft);max-width:34ch;margin:8px auto 0}
-.cards{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
-.card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 10px 26px -18px rgba(30,40,20,.35);text-align:center;position:relative}
-.card .pic{background:var(--peach);aspect-ratio:4/3;display:grid;place-items:center;position:relative}
-.card .pic img{width:84%;height:84%;object-fit:contain}
+.cards{list-style:none;display:grid;gap:14px;margin-top:26px}
+.card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 10px 26px -18px rgba(30,40,20,.35);display:grid;grid-template-columns:minmax(85px,29%) 1fr;align-items:stretch}
+.card .pic{background:var(--peach);display:grid;place-items:center}
+.card .pic img{width:84%}
 .card .pic svg{width:44%;fill:none;stroke:var(--green-dk);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .card .txt{padding:12px 12px 16px}
 .card h3{font-size:18px}
-.card p{font-size:16px;color:var(--soft);line-height:1.5;margin-top:4px}
-.card .label{left:8px;top:8px;font-size:12px;padding:5px 8px}
+.card p{font-size:17px;color:var(--soft);line-height:1.5;margin-top:4px}
 .edge-l{width:90px;left:-40px;top:-10px;transform:rotate(30deg);z-index:0}
+
+@media (max-width:350px){
+  .pin input{padding-inline:8px}
+  .pin .btn{padding-inline:12px}
+}
 
 @media (min-width:960px){
   body{font-size:20px}
   .bar{padding:22px 0}
-  .bar img{height:44px}
+  .bar img{width:193px}
   .hero{padding:30px 0 60px}
-  .hero .leaf-tl{width:220px;left:-80px;top:-120px}
-  .hero .grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px}
+  .hero .grid{grid-template:"intro plate" 1fr "actions plate" 1fr / 1fr 1fr;gap:16px 40px}
+  .hero .intro{align-self:end}
+  .hero .actions{align-self:start}
+  .hero h1{max-width:16ch}
+  .hero h1 .ending{display:inline;color:inherit}
+  .hero h1 .purest{color:var(--green)}
+  .hero .doodle{display:block}
   .pin{max-width:460px}
-  .plate{margin:0 auto}
+  .plate{width:min(100% - 40px,460px);align-self:center}
   .mini{grid-template-columns:repeat(3,1fr);margin-top:64px}
   .about{padding:90px 0}
   .about .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}
@@ -104,6 +111,9 @@ header{position:relative;z-index:5}
   .edge-r{width:170px;right:-100px;top:-30px}
   .way{padding:60px 0 110px}
   .cards{grid-template-columns:repeat(3,1fr);gap:26px}
+  .card{display:block;text-align:center}
+  .card .pic{aspect-ratio:4/3}
+  .card .pic img{width:auto;max-width:84%;max-height:175px}
   .card h3{font-size:20px}
   .card p{font-size:17px}
   .edge-l{width:180px;left:-60px}
@@ -112,9 +122,9 @@ header{position:relative;z-index:5}
 </head>
 <body>
 <header>
-  <img class="cut leaf-tl" src="img/leaf.webp" alt="" style="position:absolute;width:120px;left:-84px;top:-84px;transform:rotate(150deg);z-index:1">
+  <img class="cut leaf-tl" src="img/leaf.webp" alt="" style="position:absolute;width:120px;left:-84px;top:-84px;transform:rotate(150deg);z-index:1" width="700" height="712">
   <div class="wrap bar">
-    <img src="../shared/wordmark.png" alt="Atulyash">
+    <img src="../shared/wordmark.png" alt="Atulyash" width="566" height="129">
     <div class="social">
       <a class="sq" href="https://www.instagram.com/atulyashfoods/" aria-label="Atulyash on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="#3A3B38" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
       <a class="call" href="tel:+919818588996">Call us</a>
@@ -127,19 +137,21 @@ header{position:relative;z-index:5}
   <svg class="doodle" style="right:6%;top:30px;width:90px" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 95V20M50 30c-10-6-14-16-12-24 8 4 12 12 12 24zm0 0c10-6 14-16 12-24-8 4-12 12-12 24zM50 46c-10-6-14-16-12-24 8 4 12 12 12 24zm0 0c10-6 14-16 12-24-8 4-12 12-12 24z"/></svg>
   <svg class="doodle" style="left:2%;top:58%;width:80px" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="38"/><path d="M30 40l4 4M60 34l3 3M48 62l4 3M66 58l3 4M36 66l3 2"/></svg>
   <div class="wrap grid">
-    <div>
-      <h1 id="h1">Atta in its <span>purest</span> form</h1>
+    <div class="intro">
+      <h1 id="h1">Atta in its <span class="ending"><span class="purest">purest</span> form</span></h1>
       <p class="lede">Ours is milled slowly on natural stone. Fresh, every week.</p>
+    </div>
+    <div class="plate">
+      <img class="roti" src="img/roti-cut.webp" alt="A stack of fresh rotis on a steel thali" width="1000" height="1012">
+      <img class="cut leaves" src="img/leaves.webp" alt="" width="900" height="919">
+      <img class="cut leaf" src="img/sprig-cut.webp" alt="" width="600" height="906">
+    </div>
+    <div class="actions">
       <div class="pin" id="area">
         <label for="pin">Check delivery to my area</label>
         <div class="row"><input id="pin" inputmode="numeric" maxlength="6" placeholder="Your 6-digit PIN code" autocomplete="postal-code"><a class="btn g" href="#area">Check</a></div>
       </div>
       <a class="btn o more" href="#packs">See packs and prices</a>
-    </div>
-    <div class="plate">
-      <img class="roti" src="img/roti-cut.webp" alt="A stack of fresh rotis on a steel thali">
-      <img class="cut leaves" src="img/leaves.webp" alt="">
-      <img class="cut leaf" src="img/sprig-cut.webp" alt="">
     </div>
   </div>
   <div class="wrap mini">
@@ -150,17 +162,17 @@ header{position:relative;z-index:5}
 </section>
 
 <section class="about" aria-labelledby="h2m">
-  <img class="cut edge-r" src="img/leaf.webp" alt="">
+  <img class="cut edge-r" src="img/leaf.webp" alt="" width="700" height="712">
   <div class="wrap grid">
     <div class="bowl">
-      <img class="atta" src="img/atta-cut.webp" alt="A wooden bowl of whole wheat atta">
-      <img class="cut lv1" src="img/leaves.webp" alt="">
-      <img class="cut lv2" src="img/leaf.webp" alt="">
+      <img class="atta" src="img/atta-cut.webp" alt="A wooden bowl of whole wheat atta" width="700" height="724">
+      <img class="cut lv1" src="img/leaves.webp" alt="" width="900" height="919">
+      <img class="cut lv2" src="img/leaf.webp" alt="" width="700" height="712">
     </div>
     <div>
       <p class="kick">Think about it</p>
       <h2 id="h2m">We question everything. Why not atta?</h2>
-      <div class="veerline"><img src="../shared/veer-bust.webp" alt="Veer"><p lang="hi-Latn">Isse kisi ne poocha?</p></div>
+      <div class="veerline"><img src="../shared/veer-bust.webp" alt="Veer" width="455" height="520"><p lang="hi-Latn">Isse kisi ne poocha?</p></div>
       <p class="body">We keep changing everything around us. Our skincare, our cooking oil, even our utensils, because we research what is best for our family. So why don't we stop and think about our atta? Its quality, where it comes from, how it is made. We just take their word for it.</p>
       <a class="btn g" href="#way">See how Atulyash answers</a>
     </div>
@@ -168,17 +180,17 @@ header{position:relative;z-index:5}
 </section>
 
 <section class="way" id="way" aria-labelledby="h2w">
-  <img class="cut edge-l" src="img/sprig-cut.webp" alt="">
+  <img class="cut edge-l" src="img/sprig-cut.webp" alt="" width="600" height="906">
   <div class="wrap">
     <p class="kick">Six choices</p>
     <h2 id="h2w">The Atulyash way</h2>
     <p class="intro">Every choice behind our atta, out in the open.</p>
     <ol class="cards">
-      <li class="card"><div class="pic"><img src="../shared/sharbati-wheat-sack.webp" alt=""></div><div class="txt"><h3>The wheat</h3><p>Single-origin MP Sharbati. Never blended with other varieties.</p></div></li>
+      <li class="card"><div class="pic"><img src="../shared/sharbati-wheat-sack.webp" alt="" width="900" height="943"></div><div class="txt"><h3>The wheat</h3><p>Single-origin MP Sharbati. Never blended with other varieties.</p></div></li>
       <li class="card"><div class="pic"><svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="18" rx="18" ry="6"/><path d="M6 18l4 16c2 6 26 6 28 0l4-16M14 26h20M16 32h16"/></svg></div><div class="txt"><h3>The cleaning</h3><p>In several stages.</p></div></li>
-      <li class="card"><div class="pic"><img src="../shared/stone-chakki-milling.webp" alt=""></div><div class="txt"><h3>The stone</h3><p>Natural stone chakkis. No emery stone, no steel rollers.</p></div></li>
-      <li class="card"><div class="pic"><img src="../shared/stone-chakki-chokar-retained.webp" alt=""></div><div class="txt"><h3>The chokar</h3><p>Chokar kept in. Nothing removed, nothing added.</p></div></li>
-      <li class="card"><div class="pic"><img src="../shared/pack-2kg-day1-milled-day2-delivered.webp" alt=""></div><div class="txt"><h3>The milling day</h3><p>Milled in small batches the day before, delivered the next morning.</p></div></li>
+      <li class="card"><div class="pic"><img src="../shared/stone-chakki-milling.webp" alt="" width="1000" height="750"></div><div class="txt"><h3>The stone</h3><p>Natural stone chakkis. No emery stone, no steel rollers.</p></div></li>
+      <li class="card"><div class="pic"><img src="../shared/stone-chakki-chokar-retained.webp" alt="" width="1000" height="750"></div><div class="txt"><h3>The chokar</h3><p>Chokar kept in. Nothing removed, nothing added.</p></div></li>
+      <li class="card"><div class="pic"><img src="../shared/pack-2kg-day1-milled-day2-delivered.webp" alt="" width="1000" height="750"></div><div class="txt"><h3>The milling day</h3><p>Milled in small batches the day before, delivered the next morning.</p></div></li>
       <li class="card"><div class="pic"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="12" cy="34" r="6"/><circle cx="38" cy="34" r="6"/><path d="M12 34h10l6-12h6l4 12M28 22l-4-8h-6M34 22h6"/></svg></div><div class="txt"><h3>The delivery</h3><p>We deliver with our own riders. Packed with minimal handling.</p></div></li>
     </ol>
   </div>
