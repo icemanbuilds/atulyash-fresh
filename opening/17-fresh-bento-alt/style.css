@@ -101,3 +101,21 @@ h1,h2,h3,.timeline strong {font-weight:700}
  .field:before {width:32px;height:32px}
 }
 @media(max-width:720px){.field:before{display:none}.field h1{font-size:clamp(2.85rem,12.4vw,3.9rem)}.field:after{background:linear-gradient(0deg,#0b281af2,#0d281aa8 55%,transparent 88%)}}
+
+.conversation {background:#edf4dc;border-radius:20px;gap:0;margin-block:clamp(24px,4vw,48px);overflow:hidden}
+.manifesto {background:transparent;color:#164321}
+.manifesto em {color:#366523}
+.veer {background:transparent;min-height:250px}
+.veer p {margin-inline:auto}
+.mill-note {border-block:1px solid #bcc9ae;margin:0 0 24px}
+.mill-note summary {display:flex;align-items:center;justify-content:space-between;min-height:64px;cursor:pointer;font:700 clamp(1.25rem,2.4vw,1.8rem) Georgia,serif;list-style:none}
+.mill-note summary::-webkit-details-marker {display:none}
+.mill-note summary span {font:normal 1.8rem/1 system-ui}
+.mill-note[open] summary span {transform:rotate(45deg)}
+.mill-note ol {margin:0;padding:0 0 24px;list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.mill-note p {margin-top:6px}
+@media(max-width:720px){
+ .veer {min-height:155px}.veer p {margin:0 0 0 22px}
+ .manifesto {padding-bottom:14px}
+ .mill-note ol {grid-template-columns:1fr;gap:16px}
+}
