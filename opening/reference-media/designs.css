@@ -170,21 +170,29 @@ main { padding-bottom: clamp(20px, 5vw, 48px); }
 .gold .packs { background: #fff4d5; border-radius: var(--radius); padding: 16px 10px; text-align: center; }
 .gold .pack-card { background: #fffdfa; border: 1px solid #f4dfae; }
 
-.grove { --display: "Trebuchet MS", system-ui, sans-serif; --ink: #213f14; --button: #365e12; --accent: #8b4700; --panel: #f5f2df; }
+.grove, .white {
+  --ink: #213f14;
+  --button: #365e12;
+  --wheat-green: #88a720;
+  --canopy-green: #325109;
+  --pale-green: #eef0d6;
+  --hero-green: linear-gradient(125deg, var(--wheat-green), var(--canopy-green) 77%);
+}
+.grove { --display: "Trebuchet MS", system-ui, sans-serif; --accent: #8b4700; --panel: #f5f2df; }
 .grove .hero { background: #fbf1db; }
-.grove .hero-shape { inset: 0 -16% 3% 12%; border-radius: 67% 13% 0 18%; background: linear-gradient(125deg,#88a720,#325109 77%); transform: rotate(-8deg); }
+.grove .hero-shape { inset: 0 -16% 3% 12%; border-radius: 67% 13% 0 18%; background: var(--hero-green); transform: rotate(-8deg); }
 .grove .pack-photo { background: #ecefcf; }
 .grove .pack-card:nth-child(2) .pack-photo { background: #ffe7ac; }
-.grove .facts-panel { background: #eef0d6; padding: 24px 11px 14px; border-radius: var(--radius); text-align: center; }
+.grove .facts-panel { background: var(--pale-green); padding: 24px 11px 14px; border-radius: var(--radius); text-align: center; }
 .grove .facts-panel li { background: #fffaf0; }
 
-.white { --paper: #fff; --outer: #f4f4eb; --panel: #f6f7e9; --ink: #173e15; --button: #164213; --accent: #3d5f0e; }
-.white .hero-shape { inset: 4% 4% 4% 19%; transform: rotate(-18deg); border-radius: 53% 46% 38% 48%; background: #eaf0d8; }
+.white { --paper: #fff; --outer: #f4f4eb; --panel: var(--pale-green); --accent: var(--button); }
+.white .hero-shape { inset: 4% 4% 4% 19%; transform: rotate(-18deg); border-radius: 53% 46% 38% 48%; background: var(--hero-green); }
 .white .story-photo { order: 0; }
 .white .facts-strip { margin-top: 14px; }
 .white .packs ul { align-items: start; }
-.white .pack-card:nth-child(2) { outline: 1px solid #7c983b; outline-offset: -1px; }
-.white .closing { background: #f9faef; }
+.white .pack-card:nth-child(2) { outline: 1px solid var(--wheat-green); outline-offset: -1px; }
+.white .closing { background: var(--pale-green); }
 
 @media (max-width: 359px) {
   .pack-action { font-size: .74rem; }
