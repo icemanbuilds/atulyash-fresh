@@ -26,6 +26,7 @@
   background: none;
   border: 0;
   border-radius: 0;
+  box-shadow: none;
   text-align: left;
 }
 .gold .facts-panel li:first-child { padding-inline-start: 0; }
@@ -114,7 +115,24 @@
   .gold .facts-panel li { padding: 9px 0; }
   .gold .facts-panel li + li { border-inline-start: 0; border-top: 1px solid var(--kitchen-rule); }
   .gold .journal ul { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto; }
-  .gold .journal li:first-child { grid-row: auto; margin-bottom: 12px; }
+  .gold .journal li:first-child {
+    grid-row: auto;
+    grid-template-columns: 39% minmax(0, 1fr);
+    grid-template-rows: auto;
+    align-items: stretch;
+    min-height: 156px;
+    margin-bottom: 12px;
+    border-radius: 17px;
+  }
+  .gold .journal li:first-child img {
+    height: 100%;
+    aspect-ratio: auto;
+    object-position: 47% center;
+  }
+  .gold .journal li:first-child > div { align-self: center; padding: 13px 12px 9px 14px; }
+  .gold .journal li:first-child h3 { font-size: clamp(1.25rem, 5.1vw, 1.65rem); }
+  .gold .journal li:first-child .button { padding-inline-end: 0; gap: 4px; }
+  .gold .journal li:first-child .button svg { width: 14px; }
   .gold .journal li:not(:first-child) { grid-template-columns: 90px minmax(0, 1fr); }
   .gold .meals { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto; gap: 0; padding: 0; }
   .gold .meals h2 { max-width: 12ch; padding: 23px 20px 17px; }
