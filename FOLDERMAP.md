@@ -12,10 +12,10 @@ A clean starting kit for redesigning the Atulyash homepage with no old design in
 - `assets/people/`: Dr. Asha Kawatra's photo.
 - `assets/illustrations/`: the brand's own AI-made illustrations (stone chakki, chokar kept in, Sharbati wheat sack, Day 1 milled / Day 2 delivered pack, natural millstone, atta with rotis). Illustrations, never real photos.
 - `inspiration/`: the owner's seven pictures, numbered by style. `STYLES.md` explains the six styles. These are the only styles a design may draw from.
-- `opening/`: ten active homepage directions, linked from both galleries in display order.
-  - Earlier directions: `1-rasoi-collage/`, `8-morning-market/`, `9-glass-field/`, `10-golden-glass/` and `11-fresh-bento/`.
+- `opening/`: eight active homepage directions, linked from both galleries in display order.
+  - Earlier directions: `8-morning-market/`, `9-glass-field/`, `10-golden-glass/` and `11-fresh-bento/`.
   - Shelved: `2-the-pack-speaks/` (available by direct link).
-  - Latest references: `12-wheat-afterglow/`, `13-saffron-market/`, `14-golden-kitchen/`, `15-harvest-grove/` and `16-pure-and-simple/`. Each has its own static page and uses `reference-media/` for shared styles, navigation and imagery.
+  - Latest references: `13-saffron-market/`, `14-golden-kitchen/`, `15-harvest-grove/` and `16-pure-and-simple/`. Each has its own static page and uses `reference-media/` for shared styles, navigation and imagery.
   - `shared/`: web-sized copies of the logo (full colour, white, black), pack, Veer drawings and brand illustrations that every direction uses.
   - `_gen/`: the raw Codex-generated concept images (full size) and the Veer reference copies used to make them.
   - `screenshots/`: phone (390 px) and desktop (1280 px) screenshots of each direction.
