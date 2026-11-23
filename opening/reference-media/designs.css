@@ -147,8 +147,8 @@ main { padding-bottom: clamp(20px, 5vw, 48px); }
 .saffron .pack-card { border: 1px solid #f3dfb8; }
 .saffron .closing { background: #17442b; color: #fff7df; --ink: #fff7df; --body: #fff7df; }
 
-.gold { --paper: #fffaf0; --outer: #f8f5ec; --panel: #fff3d8; --accent: #946000; }
-.gold .hero { background: radial-gradient(ellipse at 24% 20%,#ffda57,#ffbf0d 76%); padding-bottom: 12px; }
+.gold { --paper: #fffaf0; --outer: #f8f5ec; --panel: #fff3d8; --accent: #946000; --ink: #213f14; --button: #365e12; --gold-reference: #ffcf39; --gold-surface: linear-gradient(150deg, #ffd13e, #ffcf39 55%, #ffcd34); }
+.gold .hero { background: var(--gold-surface); padding-bottom: 12px; }
 .gold .hero::after {
   content: ""; position: absolute; bottom: -1px; left: 0; width: 100%; height: 18px;
   background: var(--paper); border-radius: 55% 55% 0 0 / 100% 100% 0 0;
@@ -156,8 +156,9 @@ main { padding-bottom: clamp(20px, 5vw, 48px); }
 .gold .hero-shape { display: none; }
 .gold .facts-panel, .gold .journal, .gold .meals { text-align: center; }
 .gold .facts ul { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; }
-.gold .facts li { border: 1px solid #f4ce72; box-shadow: 2px 4px 0 #ffbf18; border-radius: 23px; }
-.gold .facts svg { color: #9d6400; }
+.gold .facts li { background: var(--gold-surface); border: 1px solid #c89a21; border-radius: 23px; }
+.gold .facts svg { color: var(--button); }
+.gold .journal li { background: var(--gold-surface); }
 .journal ul { display: grid; gap: 10px; }
 .journal li { display: grid; grid-template-columns: 33% minmax(0,1fr); overflow: hidden; text-align: left; border-radius: 15px; background: var(--panel); }
 .journal li img { width: 100%; height: 100%; object-fit: cover; }
@@ -167,8 +168,10 @@ main { padding-bottom: clamp(20px, 5vw, 48px); }
 .mosaic img { min-height: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 13px; }
 .mosaic img:first-child { grid-row: span 2; }
 .meals > p { margin: 15px auto 0; max-width: 63ch; }
-.gold .packs { background: #fff4d5; border-radius: var(--radius); padding: 16px 10px; text-align: center; }
-.gold .pack-card { background: #fffdfa; border: 1px solid #f4dfae; }
+.gold .packs { background: var(--gold-surface); border-radius: var(--radius); padding: 16px 10px; text-align: center; }
+.gold .pack-card { background: var(--gold-surface); border: 1px solid #ad861e; }
+.gold .closing { background: linear-gradient(135deg, #29491b, #18351e); color: #fff3d8; --ink: #fff3d8; --body: #fffaf0; }
+.gold .closing .button { background: var(--gold-surface); color: #213f14; border-color: var(--gold-reference); }
 
 .grove, .white {
   --ink: #213f14;
